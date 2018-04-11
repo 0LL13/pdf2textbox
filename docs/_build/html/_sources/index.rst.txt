@@ -6,9 +6,6 @@
 pdf2textbox's doc
 =================
 
-Guide:
-^^^^^^
-
 .. toctree::
    :hidden:
    :maxdepth: 2

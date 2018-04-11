@@ -42,8 +42,6 @@
             
   <div class="section" id="pdf2textbox-s-doc">
 <h1>pdf2textbox&#8217;s doc<a class="headerlink" href="#pdf2textbox-s-doc" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="guide">
-<h2>Guide:<a class="headerlink" href="#guide" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 </div>
 <p>A PDF-to-text converter based on pdfminer2.</p>
@@ -57,7 +55,7 @@ original order.</p>
 <p class="last">Extract PDF-files with <a class="reference external" href="https://pypi.python.org/pypi/pdfminer2">pdfminer2</a></p>
 </div>
 <div class="section" id="what-s-the-tweak">
-<h3>What&#8217;s the tweak?<a class="headerlink" href="#what-s-the-tweak" title="Permalink to this headline">¶</a></h3>
+<h2>What&#8217;s the tweak?<a class="headerlink" href="#what-s-the-tweak" title="Permalink to this headline">¶</a></h2>
 <p>While pdfminer2 works well for plain text there will be issues when that
 text is in two or more columns, when there are indented quotes, headers on
 every page, pagenumbers, dates, and more. The solutions that can be found
@@ -75,21 +73,20 @@ to success. Graphs, tables, and other visual or 2D blocks will still cause
 havock.</p>
 </div>
 <div class="section" id="features">
-<h3>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h3>
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <p>Convert PDF to text in the original order. This works well for PDF-files
 without tables, graphs, and other stuff.</p>
 <p>After extracting the text in boxes, there still has to be run another
 function to strip the text of special signs, zeroes and the like.</p>
 </div>
 <div class="section" id="note">
-<h3>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<h2>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
 <p>The textboxes will NOT be identical with paragraphs of the PDF-file.
 There might be cases when a textbox ends mid-sentence just to be
 coninued with the next box. This is due to the PDF file&#8217;s graphic-oriented organization of content. However, the order of text will be correct.</p>
 <p>When a document contains indexes, tocs, footnotes and other stuff, there
 is still a good chance to get hold of the text in a meaningful order,
 however the task to strip and reconnect the boxes will become tedious.</p>
-</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
@@ -110,12 +107,9 @@ however the task to strip and reconnect the boxes will become tedious.</p>
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">pdf2textbox&#8217;s doc</a><ul>
-<li><a class="reference internal" href="#guide">Guide:</a><ul>
 <li><a class="reference internal" href="#what-s-the-tweak">What&#8217;s the tweak?</a></li>
 <li><a class="reference internal" href="#features">Features</a></li>
 <li><a class="reference internal" href="#note">Note</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
