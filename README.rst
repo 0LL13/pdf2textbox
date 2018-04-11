@@ -33,8 +33,8 @@ pip install pdf2textbox
 Contribute
 ----------
 
-- Issue Tracker: github.com/OLL13/pdf2textbox/issues
-- Source Code: github.com/OLL13/pdf2textbox/pdf2textbox
+- Issue Tracker: github.com/0LL13/pdf2textbox/issues
+- Source Code: github.com/0LL13/pdf2textbox/pdf2textbox
 
 Support
 -------
