@@ -1,5 +1,11 @@
+'''
+pdf2textbox.py
+
+:param url1: A URL pointing at a PDF file with 2 columns and a header
+:returns: Returns a list containing text items that have been extracted from PDF
+:raises keyError: No
+'''
 import io
-import os
 import re
 import requests
 
@@ -12,27 +18,42 @@ from pdfminer.pdfparser import PDFParser
 from pdfminer.pdfdocument import PDFDocument
 
 
-def get_pdfFile(url=None):
+def get_pdf_file(url=None):
+    '''
+    Download and return a PDF file using requests.
+    '''
     if not url:
-        url1 = 'https://www.landtag.nrw.de/portal/WWW/dokumentenarchiv/Dokument?Id=MMP14%2F138|16018|16019'
+        #url1 = 'https://www.landtag.nrw.de/portal/WWW/dokumentenarchiv/Dokument?Id=MMP14%2F138|16018|16019'
 
-    url2 = 'http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf'
-    url3 = 'http://www.pdf995.com/samples/pdf.pdf'
-    url4 = 'https://www.einfach-fuer-alle.de/download/pdf_barrierefrei.pdf'
+        #url2 = 'http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf'
+        #url3 = 'http://www.pdf995.com/samples/pdf.pdf'
+        #url4 = 'https://www.einfach-fuer-alle.de/download/pdf_barrierefrei.pdf'
+
+        # Zwei Nachnamen, ein Zitat - verliert einen Absatz (des Vorredners)
+        url5 = 'https://www.landtag.nrw.de/portal/WWW/dokumentenarchiv/Dokument?Id=MMP16%2F8|368|369'
+
+        # zahlreiche Unterbrechungen, ein einzelnes Wort ("immer") ohne Kontext:
+        #base = './scraper_data/pdf/WP16/ABEL_MARTIN-SEBASTIAN/Id=MMP16%2F140|14762|14764.pdf'
+
+        # Fragezeichen, Ausrufezeichen, 18.400, Dr., 8. Februar:
+        #base = './scraper_data/pdf/WP16/ABEL_MARTIN-SEBASTIAN/Id=MMP16%2F139|14622|14624.pdf'
+
+        # Drei Vornamen:
+        #base = './scraper_data/pdf/WP15/ZIMKEIT_STEFAN HANS WALTER/Id=MMP15%2F9|583|584.pdf'
 
 
-    r = requests.get(url1)
-    print('status_code ', r.status_code)
-    print('encoding ', r.encoding)
-    print('content-type ', r.headers.get('content-type'))
+    req = requests.get(url5)
+    print('status_code ', req.status_code)
+    print('encoding ', req.encoding)
+    print('content-type ', req.headers.get('content-type'))
 
-    f = io.BytesIO(r.content)
-    print('type f', type(f))
+    pdf = io.BytesIO(req.content)
+    print('type pdf', type(pdf))
 
-    return f
+    return pdf
 
 
-def pdf2textbox(f):
+def pdf2textbox(pdf):
     '''
     A PDF-to-text converter based on pdfminer2.
     Converts PDF-files to text and avoids the caveats that multi-columned
@@ -58,7 +79,7 @@ def pdf2textbox(f):
     '''
 
     textbox_list = list()
-    parser = PDFParser(f)
+    parser = PDFParser(pdf)
     document = PDFDocument(parser, password=None)
     if not document.is_extractable:
         raise PDFTextExtractionNotAllowed
@@ -130,9 +151,11 @@ def extract_textboxes(textbox_list):
 
 
 def main():
+    '''Wrapping the module in main()'''
+
     token = False
-    f = get_pdfFile(url=None)
-    textbox_list = pdf2textbox(f)
+    pdf = get_pdf_file(url=None)
+    textbox_list = pdf2textbox(pdf)
     box_list = extract_textboxes(textbox_list)
 
     if box_list:

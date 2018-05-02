@@ -59,7 +59,7 @@ Note
 
 The textboxes will NOT be identical with paragraphs of the PDF-file.
 There might be cases when a textbox ends mid-sentence just to be
-coninued with the next box. This is due to the PDF file's graphic-oriented organization of content. However, the order of text will be correct.
+continued with the next box. This is due to the PDF file's graphic-oriented organization of content. However, the order of text will be correct.
 
 When a document contains indexes, tocs, footnotes and other stuff, there 
 is still a good chance to get hold of the text in a meaningful order, 
