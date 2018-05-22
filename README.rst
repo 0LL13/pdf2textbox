@@ -3,8 +3,9 @@ pdf2textbox
 ============
 
 A PDF-to-text converter based on pdfminer2.
-Converts PDF-files to text and avoids the caveats that multi-columned
-PDF-files have in store for the unsuspecting PDF converter.
+Converts PDF files with 2 columns to text and avoids the caveats 
+that multi-columned PDF files have in store for the PDF converter.
+
 
 Features
 --------
