@@ -1,0 +1,4 @@
+{
+  "tests/test_types.py": true, 
+  "try/test_sample.py::test_answer": true
+}

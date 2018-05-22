@@ -1,0 +1,27 @@
+digraph "import" {
+rankdir=LR
+charset="utf-8"
+URL="." node[shape="box"]
+"func_w0401" [];
+"input.func_3k_removed_stuff_py_30" [];
+"input.func_w0233" [];
+"input.func_dotted_ancestor" [];
+"input.func_w0401" [];
+"input.w0401_cycle" [];
+"input.func_w0401_package.all_the_things" [];
+"input.func_w0401_package.thing2" [];
+"input.func_w0401_package.thing1" [];
+"input.func_w0401_package.thing2" [];
+"input.w0401_cycle" [];
+"input.func_w0401_disabled" [];
+"input.func_w0401_disabled_in_func" [];
+"input.func_3k_removed_stuff_py_30" -> "func_w0401" [];
+"input.func_dotted_ancestor" -> "input.func_w0233" [];
+"input.w0401_cycle" -> "input.func_w0401" [];
+"input.func_w0401_package.thing2" -> "input.func_w0401_package.all_the_things" [];
+"input.func_w0401_package.all_the_things" -> "input.func_w0401_package.thing1" [];
+"input.func_w0401_package.all_the_things" -> "input.func_w0401_package.thing2" [];
+"input.func_w0401" -> "input.w0401_cycle" [];
+"input.func_w0401_disabled" -> "input.w0401_cycle" [];
+"input.func_w0401_disabled_in_func" -> "input.w0401_cycle" [];
+}

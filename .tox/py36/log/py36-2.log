@@ -1,0 +1,12 @@
+actionid: py36
+msg: installpkg
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py36/bin/pip', 'install', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist/pdf2textbox-0.1.zip']
+
+Processing ./.tox/dist/pdf2textbox-0.1.zip
+Building wheels for collected packages: pdf2textbox
+  Running setup.py bdist_wheel for pdf2textbox: started
+  Running setup.py bdist_wheel for pdf2textbox: finished with status 'done'
+  Stored in directory: /home/frodo/.cache/pip/wheels/d1/6b/31/094d34c8462d2b2db1ec171bf870d5ef8a7107a21015c3b678
+Successfully built pdf2textbox
+Installing collected packages: pdf2textbox
+Successfully installed pdf2textbox-0.1
