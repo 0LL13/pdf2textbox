@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: pdf2textbox
-Version: 0.1
+Version: 0.1.2
 Summary: A PDF-to-text converter based on pdfminer2
 Home-page: https://github.com/0LL13/pdf2textbox
 Author: Oliver Stapel
@@ -10,9 +10,6 @@ Download-URL: https://github.com/0LL13/pdf2textbox/archive/0.1.tar.gz
 Description: The pdf2textbox converter aims at converting PDF that comes                        in two columns and a header into text without loosing too                        much information. To this end it uses the x0 and y1                        coordinates to differentiate between left and right                        column and header. Text is then stripped of unwanted                        special signs and stored in a dictionary that contains                        pagenumber, header, left and right column as found in the                        PDF document.
 Keywords: PDF,pdfminer2,PDF conversion,text processing
 Platform: UNKNOWN
-Classifier: Development Status :: 5 - Stable
-Classifier: Intended Audience :: PDF scrapers
-Classifier: Topic :: Text Processing
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Programming Language :: Python :: 3.6
 Classifier: Operating System :: POSIX :: Linux

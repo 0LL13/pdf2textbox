@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name = 'pdf2textbox',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    version = '0.1.1',
+    version = '0.1.2',
     description = 'A PDF-to-text converter based on pdfminer2',
     long_description = 'The pdf2textbox converter aims at converting PDF that comes\
                         in two columns and a header into text without loosing too\
@@ -21,11 +21,12 @@ setup(
     keywords = ['PDF', 'pdfminer2', 'PDF conversion', 'text processing'],
     license='MIT',
     classifiers = [
-        'Development Status :: 5 - Stable',
-        'Intended Audience :: PDF scrapers',
-        'Topic :: Text Processing',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.6',
         'Operating System :: POSIX :: Linux',
         ],
     )
+
+# 'Topic :: Text Processing',
+# 'Intended Audience :: PDF scrapers',
+# 'Development Status :: 5 - Stable',

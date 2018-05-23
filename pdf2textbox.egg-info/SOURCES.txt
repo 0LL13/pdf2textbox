@@ -9,7 +9,6 @@ pdf2textbox.egg-info/top_level.txt
 src/pdf2textbox/LICENSE.txt
 src/pdf2textbox/__init__.py
 src/pdf2textbox/pdf2textbox.py
-src/pdf2textbox/requirements.txt
 src/pdf2textbox/data/Id=MMP15%2F57|5694|5696.pdf
 src/pdf2textbox/data/Id=MMP16%2F139|14622|14624.pdf
 src/pdf2textbox/docs/Makefile
