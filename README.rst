@@ -36,7 +36,7 @@ Contribute
 ----------
 
 - Issue Tracker: github.com/0LL13/pdf2textbox/issues
-- Source Code: github.com/0LL13/pdf2textbox/pdf2textbox
+- Source Code: github.com/0LL13/pdf2textbox/src/pdf2textbox
 
 Support
 -------

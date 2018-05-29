@@ -17,16 +17,16 @@ setup(
     author = 'Oliver Stapel',
     author_email = 'hardy.ecc95@gmail.com',
     url = 'https://github.com/0LL13/pdf2textbox',
-    download_url = 'https://github.com/0LL13/pdf2textbox/archive/0.1.tar.gz',
+    download_url = 'https://github.com/0LL13/pdf2textbox/archive/0.1.2.tar.gz',
     keywords = ['PDF', 'pdfminer2', 'PDF conversion', 'text processing'],
     license='MIT',
     classifiers = [
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.6',
         'Operating System :: POSIX :: Linux',
+        'Development Status :: 5 - Production/Stable',
+        'Topic :: Text Processing :: General',
+        'Intended Audience :: Science/Research',
         ],
     )
 
-# 'Topic :: Text Processing',
-# 'Intended Audience :: PDF scrapers',
-# 'Development Status :: 5 - Stable',

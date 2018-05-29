@@ -24,15 +24,21 @@ def _get_pdf_file(url=None):
     '''
     if not url:
         base = 'https://www.landtag.nrw.de/portal/WWW/dokumentenarchiv/Dokument?'
-        #url1 = '{}Id=MMP14%2F138|16018|16019'.format(base)
+        url1 = '{}Id=MMP14%2F138|16018|16019'.format(base)
 
-        #url2 = 'http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf'
-        #url3 = 'http://www.pdf995.com/samples/pdf.pdf'
-        #url4 = 'https://www.einfach-fuer-alle.de/download/pdf_barrierefrei.pdf'
+        # Fragezeichen, Ausrufezeichen, 18.400, Dr., 8. Februar
+        url2 = '{}Id=MMP16%2F139|14617|14630'.format(base)
+
+        # zahlreiche Unterbrechungen, ein einzelnes Wort ("immer") ohne Kontext
+        url3 = '{}Id=MMP16%2F140|14760|14768'.format(base)
+
+        # linke Spalte und rechte Spalte nicht auf der gleichen Höhe
+        # --> Abruszat's Rede rechte Spalte mit Sätzen aus linker Spalte
+        url4 = '{}Id=MMP15%2F57|5694|5696'.format(base)
 
         # Zwei Nachnamen, ein Zitat - verliert einen Absatz (des Vorredners)
         url5 = '{}Id=MMP16%2F8|368|369'.format(base)
-        url = url5
+        url = url4
 
     req = requests.get(url)
     print('status_code ', req.status_code)

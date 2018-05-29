@@ -1,0 +1,10 @@
+actionid: py32
+msg: getenv
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6', '-m', 'virtualenv', '--python', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6', 'py32']
+
+Already using interpreter /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6
+Using real prefix '/usr'
+Path not in prefix '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/include/python3.6m' '/usr'
+New python executable in /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py32/bin/python3.6
+Also creating executable in /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py32/bin/python
+Installing setuptools, pip, wheel...done.
