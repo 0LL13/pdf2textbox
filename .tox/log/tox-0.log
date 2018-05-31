@@ -76,6 +76,7 @@ copying src/pdf2textbox/docs/_build/html/_static/websupport.js -> pdf2textbox-0.
 copying tests/__init__.py -> pdf2textbox-0.1.2/tests
 copying tests/tags -> pdf2textbox-0.1.2/tests
 copying tests/test_types.py -> pdf2textbox-0.1.2/tests
+copying tests/ttest_content.py -> pdf2textbox-0.1.2/tests
 Writing pdf2textbox-0.1.2/setup.cfg
 creating '.tox/dist/pdf2textbox-0.1.2.zip' and adding 'pdf2textbox-0.1.2' to it
 adding 'pdf2textbox-0.1.2/PKG-INFO'
@@ -126,6 +127,7 @@ adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/PKG-INFO'
 adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/top_level.txt'
 adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/dependency_links.txt'
 adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/SOURCES.txt'
+adding 'pdf2textbox-0.1.2/tests/ttest_content.py'
 adding 'pdf2textbox-0.1.2/tests/__init__.py'
 adding 'pdf2textbox-0.1.2/tests/tags'
 adding 'pdf2textbox-0.1.2/tests/test_types.py'

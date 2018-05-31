@@ -47,3 +47,4 @@ src/pdf2textbox/docs/_build/html/_static/websupport.js
 tests/__init__.py
 tests/tags
 tests/test_types.py
+tests/ttest_content.py
