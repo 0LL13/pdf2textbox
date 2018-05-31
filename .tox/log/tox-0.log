@@ -1,6 +1,6 @@
 actionid: tox
 msg: packaging
-cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6', local('/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/setup.py'), 'sdist', '--formats=zip', '--dist-dir', local('/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist')]
+cmdargs: ['/home/sam/projects/vEnvs/pdf2textbox/bin/python3', local('/home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/setup.py'), 'sdist', '--formats=zip', '--dist-dir', local('/home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/dist')]
 
 running sdist
 running egg_info
@@ -38,8 +38,8 @@ copying pdf2textbox.egg-info/top_level.txt -> pdf2textbox-0.1.2/pdf2textbox.egg-
 copying src/pdf2textbox/LICENSE.txt -> pdf2textbox-0.1.2/src/pdf2textbox
 copying src/pdf2textbox/__init__.py -> pdf2textbox-0.1.2/src/pdf2textbox
 copying src/pdf2textbox/pdf2textbox.py -> pdf2textbox-0.1.2/src/pdf2textbox
-copying src/pdf2textbox/data/Id=MMP15%2F57|5694|5696.pdf -> pdf2textbox-0.1.2/src/pdf2textbox/data
-copying src/pdf2textbox/data/Id=MMP16%2F139|14622|14624.pdf -> pdf2textbox-0.1.2/src/pdf2textbox/data
+copying src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf -> pdf2textbox-0.1.2/src/pdf2textbox/data
+copying src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf -> pdf2textbox-0.1.2/src/pdf2textbox/data
 copying src/pdf2textbox/docs/Makefile -> pdf2textbox-0.1.2/src/pdf2textbox/docs
 copying src/pdf2textbox/docs/conf.py -> pdf2textbox-0.1.2/src/pdf2textbox/docs
 copying src/pdf2textbox/docs/index.rst -> pdf2textbox-0.1.2/src/pdf2textbox/docs
@@ -75,58 +75,60 @@ copying src/pdf2textbox/docs/_build/html/_static/up.png -> pdf2textbox-0.1.2/src
 copying src/pdf2textbox/docs/_build/html/_static/websupport.js -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
 copying tests/__init__.py -> pdf2textbox-0.1.2/tests
 copying tests/tags -> pdf2textbox-0.1.2/tests
+copying tests/test_content.py -> pdf2textbox-0.1.2/tests
 copying tests/test_types.py -> pdf2textbox-0.1.2/tests
 Writing pdf2textbox-0.1.2/setup.cfg
 creating '.tox/dist/pdf2textbox-0.1.2.zip' and adding 'pdf2textbox-0.1.2' to it
-adding 'pdf2textbox-0.1.2/PKG-INFO'
 adding 'pdf2textbox-0.1.2/setup.py'
-adding 'pdf2textbox-0.1.2/setup.cfg'
-adding 'pdf2textbox-0.1.2/MANIFEST.in'
 adding 'pdf2textbox-0.1.2/README.rst'
+adding 'pdf2textbox-0.1.2/MANIFEST.in'
 adding 'pdf2textbox-0.1.2/tox.ini'
+adding 'pdf2textbox-0.1.2/PKG-INFO'
+adding 'pdf2textbox-0.1.2/setup.cfg'
+adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/SOURCES.txt'
+adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/dependency_links.txt'
+adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/top_level.txt'
+adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/PKG-INFO'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/__init__.py'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/LICENSE.txt'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/pdf2textbox.py'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/__init__.py'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/Makefile'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/conf.py'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/index.rst'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/Makefile'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/doctrees/index.doctree'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/doctrees/environment.pickle'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/searchindex.js'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/objects.inv'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/search.html'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/genindex.html'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/.nojekyll'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/.buildinfo'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/genindex.html'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/search.html'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/.nojekyll'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/index.html'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/down-pressed.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/down.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/up.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/alabaster.css'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/plus.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/pygments.css'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/doctools.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/up-pressed.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/websupport.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/basic.css'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/underscore.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment-close.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/minus.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/custom.css'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/file.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/jquery.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment-bright.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/searchtools.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/ajax-loader.gif'
 adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_sources/index.rst.txt'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/data/Id=MMP16%2F139|14622|14624.pdf'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/data/Id=MMP15%2F57|5694|5696.pdf'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/PKG-INFO'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/top_level.txt'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/dependency_links.txt'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/SOURCES.txt'
-adding 'pdf2textbox-0.1.2/tests/__init__.py'
-adding 'pdf2textbox-0.1.2/tests/tags'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/basic.css'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/searchtools.js'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment-bright.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/alabaster.css'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/minus.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/doctools.js'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/ajax-loader.gif'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/websupport.js'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/plus.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/custom.css'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/down.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment-close.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/down-pressed.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/jquery.js'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/up-pressed.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/up.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/underscore.js'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/file.png'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/pygments.css'
+adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment.png'
 adding 'pdf2textbox-0.1.2/tests/test_types.py'
+adding 'pdf2textbox-0.1.2/tests/tags'
+adding 'pdf2textbox-0.1.2/tests/__init__.py'
+adding 'pdf2textbox-0.1.2/tests/test_content.py'
 removing 'pdf2textbox-0.1.2' (and everything under it)

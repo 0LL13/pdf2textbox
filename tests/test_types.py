@@ -18,8 +18,7 @@ def test_get_pdf_file():
 def test_get_textbox():
     '''test type textbox is dict'''
 
-    #file_loc = './src/pdf2textbox/data/Id=MMP15%2F57|5694|5696.pdf'
-    file_loc = './src/pdf2textbox/data/Id=MMP16%2F139|14622|14624.pdf'
+    file_loc = './src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf'
     pdf = open(file_loc, 'br')
     textbox = _get_textbox(pdf)
 
@@ -29,7 +28,7 @@ def test_get_textbox():
 def test_textbox_structure():
     '''test if textbox contains pages, header, left and right column'''
 
-    file_loc = './src/pdf2textbox/data/Id=MMP15%2F57|5694|5696.pdf'
+    file_loc = './src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
     pdf = open(file_loc, 'br')
     textbox = _get_textbox(pdf)
 
