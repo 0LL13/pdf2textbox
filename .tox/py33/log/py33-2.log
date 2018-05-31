@@ -1,5 +1,5 @@
 actionid: py33
 msg: envreport
-cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py33/bin/pip', 'freeze']
+cmdargs: ['/home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py33/bin/pip', 'freeze']
 
 pdf2textbox==0.1.2

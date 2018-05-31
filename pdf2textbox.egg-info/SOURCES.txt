@@ -9,8 +9,8 @@ pdf2textbox.egg-info/top_level.txt
 src/pdf2textbox/LICENSE.txt
 src/pdf2textbox/__init__.py
 src/pdf2textbox/pdf2textbox.py
-src/pdf2textbox/data/Id=MMP15%2F57|5694|5696.pdf
-src/pdf2textbox/data/Id=MMP16%2F139|14622|14624.pdf
+src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf
+src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf
 src/pdf2textbox/docs/Makefile
 src/pdf2textbox/docs/conf.py
 src/pdf2textbox/docs/index.rst
@@ -46,5 +46,10 @@ src/pdf2textbox/docs/_build/html/_static/up.png
 src/pdf2textbox/docs/_build/html/_static/websupport.js
 tests/__init__.py
 tests/tags
+<<<<<<< HEAD
 tests/test_types.py
 tests/ttest_content.py
+=======
+tests/test_content.py
+tests/test_types.py
+>>>>>>> 2f5a1b4853a844baa50e12ab1ae1bd3eadb01742

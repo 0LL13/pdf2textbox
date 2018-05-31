@@ -1,9 +1,9 @@
 actionid: py35
 msg: getenv
-cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6', '-m', 'virtualenv', '--python', '/usr/local/bin/python3.5', 'py35']
+cmdargs: ['/home/sam/projects/vEnvs/pdf2textbox/bin/python3', '-m', 'virtualenv', '--python', '/usr/bin/python3.5', 'py35']
 
-Using base prefix '/usr/local'
-New python executable in /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py35/bin/python3.5
-Also creating executable in /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py35/bin/python
+Using base prefix '/usr'
+New python executable in /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py35/bin/python3.5
+Also creating executable in /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py35/bin/python
 Installing setuptools, pip, wheel...done.
-Running virtualenv with interpreter /usr/local/bin/python3.5
+Running virtualenv with interpreter /usr/bin/python3.5

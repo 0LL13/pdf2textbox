@@ -2,7 +2,6 @@ __pycache__
 .pytest_cache
 include
 *.pyc
-*.pdf
 bin/
 lib/
 ./tox
