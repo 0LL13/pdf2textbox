@@ -40,10 +40,16 @@ def _get_pdf_file(url=None):
         url5 = '{}Id=MMP16%2F8|368|369'.format(base)
         url = url4
 
-    req = requests.get(url)
+    req = requests.get(url, stream=True)
     print('status_code ', req.status_code)
     print('encoding ', req.encoding)
     print('content-type ', req.headers.get('content-type'))
+
+    #with open('test.pdf', 'wb') as fout:
+    #    fout.write(req.raw.read())
+    #print(req.raw.read())
+    #print(req.content)
+    #print(req.text)
 
     pdf = io.BytesIO(req.content)
     print('type req.content', pdf)
@@ -170,3 +176,4 @@ def _get_textbox(pdf):
 if __name__ == '__main__':
     text_in_boxes = pdf2textbox()
     print(text_in_boxes)
+    #pdf2textbox()
