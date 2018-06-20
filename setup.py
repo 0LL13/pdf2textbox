@@ -11,9 +11,9 @@ setup(
                         too much information.\
                         Allows command line parameter -s (--slice) to indicate that\
                         only part of the PDF document is of interest. Start and end\
-                        page will then either retreived from the document's name\
-                        using either '_' or '|' as delimiters or - if start and end\
-                        page cannot be found - user input is requested.",
+                        page will then be either retreived from the document's name\
+                        using '_' or '|' as delimiters or - if start and end page\
+                        cannot be found - user input is requested.",
     author = 'Oliver Stapel',
     author_email = 'hardy.ecc95@gmail.com',
     url = 'https://github.com/0LL13/pdf2textbox',

@@ -1,7 +1,7 @@
 '''
 pdf2textbox.py
 
-:param url1: A URL pointing at a PDF file with max 3 columns and a header
+:param url: A URL pointing at a PDF file with max 3 columns and a header
 :returns: Returns a dict containing text items that have been extracted from PDF
 :raises NameError
 :raises UnboundLocalError
@@ -43,12 +43,17 @@ def main():
     parser.add_option("-v", "--verbose",
                       action="store_true", dest="verbose", default=False,
                       help="print additional information to stout")
+    parser.add_option("-l", "--location",
+                      action="store", dest="pdf_loc", default=None,
+                      help="add url or local address of PDF file")
     (options, args) = parser.parse_args()
     verbose = options.verbose
 
-    pdf_loc = _get_url()
+    pdf_loc = options.pdf_loc
     if not pdf_loc:
-        pdf_loc = _get_local_file()
+        pdf_loc = _get_url()
+        if not pdf_loc:
+            pdf_loc = _get_local_file()
 
     pdf = _get_pdf_file(pdf_loc, verbose)
 

@@ -1,3 +1,4 @@
+LICENSE
 MANIFEST.in
 README.rst
 setup.py
@@ -9,8 +10,20 @@ pdf2textbox.egg-info/top_level.txt
 src/pdf2textbox/LICENSE.txt
 src/pdf2textbox/__init__.py
 src/pdf2textbox/pdf2textbox.py
+src/pdf2textbox/archive/PDFMiner.py
+src/pdf2textbox/archive/pdf2textbox.bak
+src/pdf2textbox/archive/pdf2textbox.py
+src/pdf2textbox/archive/pdf2txt.py
+src/pdf2textbox/archive/pdf2txt_find_meta.py
+src/pdf2textbox/archive/pdf2txt_find_nr_cols.py
+src/pdf2textbox/archive/pdf2txt_get_header.py
+src/pdf2textbox/archive/pdf2txt_get_layout.py
+src/pdf2textbox/archive/pypdf2.py
+src/pdf2textbox/archive/test_content.py
 src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf
 src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf
+src/pdf2textbox/data/three_col_horizontal.pdf
+src/pdf2textbox/data/three_col_vertical.pdf
 src/pdf2textbox/docs/Makefile
 src/pdf2textbox/docs/conf.py
 src/pdf2textbox/docs/index.rst
@@ -46,10 +59,5 @@ src/pdf2textbox/docs/_build/html/_static/up.png
 src/pdf2textbox/docs/_build/html/_static/websupport.js
 tests/__init__.py
 tests/tags
-<<<<<<< HEAD
+tests/test_get_pdf.py
 tests/test_types.py
-tests/ttest_content.py
-=======
-tests/test_content.py
-tests/test_types.py
->>>>>>> 2f5a1b4853a844baa50e12ab1ae1bd3eadb01742
