@@ -104,22 +104,14 @@ def _get_local_file():
     Since this is the default in case no url is given, assert pdf_loc exists.
     Returns pdf_loc.
     '''
-    pdf_loc = './data/three_col_horizontal.pdf'
-    #pdf_loc = './data/three_col_vertical.pdf'          # will not work
     #pdf_loc = './data/Id=MMP16%2F139_14622_14624.pdf'  # needs page_from, page_to
-    pdf_loc = './data/Id=MMP15%2F57_5694_5696.pdf'
-    #pdf_loc = './data/01a_only_text.pdf'
-    #pdf_loc = './data/01b_only_text_with_index.pdf'
-    #pdf_loc = './data/02a_two_cols.pdf'
-    #pdf_loc = './data/02b_two_cols_with_index.pdf'
+    #pdf_loc = './data/Id=MMP15%2F57_5694_5696.pdf'
+    pdf_loc = './data/01a_only_text.pdf'
+    pdf_loc = './data/02a_two_cols.pdf'
     #pdf_loc = './data/03a_three_cols.pdf'
-    #pdf_loc = './data/03a_three_cols_with_index.pdf'
     #pdf_loc = './data/04a_text_and_header.pdf'
-    #pdf_loc = './data/04b_text_and_header_with_index.pdf'
     #pdf_loc = './data/05a_two_cols_and_header.pdf'
-    #pdf_loc = './data/05b_two_cols_and_header_with_index.pdf'
     #pdf_loc = './data/06a_three_cols_and_header.pdf'
-    #pdf_loc = './data/06b_three_cols_and_header_with_index.pdf'
 
     try:
         assert pdf_loc
