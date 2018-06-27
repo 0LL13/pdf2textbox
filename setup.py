@@ -4,11 +4,11 @@ from setuptools import setup, find_packages
 setup(
     name = 'pdf2textbox',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    version = '0.1.3',
+    version = '0.1.5',
     description = 'A PDF-to-text converter based on pdfminer2',
-    long_description = "The pdf2textbox converter aims at converting PDF that comes\
-                        in up to three columns and a header into text without loosing\
-                        too much information.\
+    long_description = "The pdf2textbox converter aims at converting PDF with up to\
+                        three columns and a header into text without loosing too\
+                        much information.\
                         Allows command line parameter -s (--slice) to indicate that\
                         only part of the PDF document is of interest. Start and end\
                         page will then be either retreived from the document's name\
@@ -29,4 +29,3 @@ setup(
         'Intended Audience :: Science/Research',
         ],
     )
-

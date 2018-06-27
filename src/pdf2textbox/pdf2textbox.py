@@ -37,6 +37,7 @@ def main():
     '''
 
     parser = OptionParser()
+
     parser.add_option("-s", "--slice",
                       action="store_true", dest="slice", default=False,
                       help="slice PDF file --> tries to find start and end page")
@@ -46,10 +47,11 @@ def main():
     parser.add_option("-l", "--location",
                       action="store", dest="pdf_loc", default=None,
                       help="add url or local address of PDF file")
+
     (options, args) = parser.parse_args()
     verbose = options.verbose
-
     pdf_loc = options.pdf_loc
+
     if not pdf_loc:
         pdf_loc = _get_url()
         if not pdf_loc:
@@ -60,10 +62,10 @@ def main():
     if options.slice:
         page_from, page_to = _get_pages(pdf_loc, verbose)
         boxes = _pdf_to_text_slice(pdf, page_from, page_to, verbose)
-        _print_boxes_sliced(boxes, page_from, page_to)
+        _print_boxes_sliced(boxes, page_from, page_to, verbose)
     else:
         boxes = _pdf_to_text_all(pdf, verbose)
-        _print_boxes_all(boxes)
+        _print_boxes_all(boxes, verbose)
 
     pdf.close()
 
@@ -103,9 +105,21 @@ def _get_local_file():
     Returns pdf_loc.
     '''
     pdf_loc = './data/three_col_horizontal.pdf'
-    pdf_loc = './data/three_col_vertical.pdf'
+    #pdf_loc = './data/three_col_vertical.pdf'          # will not work
     #pdf_loc = './data/Id=MMP16%2F139_14622_14624.pdf'  # needs page_from, page_to
     pdf_loc = './data/Id=MMP15%2F57_5694_5696.pdf'
+    #pdf_loc = './data/01a_only_text.pdf'
+    #pdf_loc = './data/01b_only_text_with_index.pdf'
+    #pdf_loc = './data/02a_two_cols.pdf'
+    #pdf_loc = './data/02b_two_cols_with_index.pdf'
+    #pdf_loc = './data/03a_three_cols.pdf'
+    #pdf_loc = './data/03a_three_cols_with_index.pdf'
+    #pdf_loc = './data/04a_text_and_header.pdf'
+    #pdf_loc = './data/04b_text_and_header_with_index.pdf'
+    #pdf_loc = './data/05a_two_cols_and_header.pdf'
+    #pdf_loc = './data/05b_two_cols_and_header_with_index.pdf'
+    #pdf_loc = './data/06a_three_cols_and_header.pdf'
+    #pdf_loc = './data/06b_three_cols_and_header_with_index.pdf'
 
     try:
         assert pdf_loc
@@ -254,7 +268,6 @@ def _pdf_to_text_slice(pdf, page_from, page_to, verbose):
     interpreter = PDFPageInterpreter(rsrcmgr, device)
     boxes = dict()
     page_nr = index = 0
-    VERTICAL = HORIZONTAL = False
     token_start = token_end = False
 
     for page in PDFPage.create_pages(document):
@@ -277,7 +290,7 @@ def _pdf_to_text_slice(pdf, page_from, page_to, verbose):
                     page_to, token_start, token_end)
 
         if token_start:
-            boxes = _fill_boxes(LTPage, VERTICAL, HORIZONTAL, boxes, page_nr)
+            boxes = _fill_boxes(LTPage, boxes, page_nr)
         if token_end:
             token_start = False
             token_end = False
@@ -327,7 +340,6 @@ def _pdf_to_text_all(pdf, verbose):
     interpreter = PDFPageInterpreter(rsrcmgr, device)
     boxes = dict()
     page_nr = index = 0
-    VERTICAL = HORIZONTAL = False
     token_start = token_end = False
 
     for page in PDFPage.create_pages(document):
@@ -335,49 +347,55 @@ def _pdf_to_text_all(pdf, verbose):
         interpreter.process_page(page)
         LTPage = device.get_result()
 
-        boxes = _fill_boxes(LTPage, VERTICAL, HORIZONTAL, boxes, page_nr)
+        boxes = _fill_boxes(LTPage, boxes, page_nr, verbose)
 
     return boxes
 
 
-def _print_boxes_sliced(boxes, page_from, page_to):
+def _print_boxes_sliced(boxes, page_from, page_to, verbose):
     token = False
     for key, value in boxes.items():
-        print(key)
+        if verbose:
+            print(key)
         for kk, vv in value.items():
-            print(kk)
+            if verbose:
+                print(kk)
             for box in vv:
                 if token:
-                    print('-'*60)
-                    print(box.x0, box.x1, box.y0, box.y1)
+                    if verbose:
+                        print('-'*60)
+                        print(box.x0, box.x1, box.y0, box.y1)
                     print(box.text)
                 elif 'header' in kk:
                     if page_from in box.text:
                         token = True
-                        print('-'*60)
-                        print(box.x0, box.x1, box.y0, box.y1)
+                        if verbose:
+                            print('-'*60)
+                            print(box.x0, box.x1, box.y0, box.y1)
                         print(box.text)
                     elif page_to in box.text:
                         token = False
 
 
-def _print_boxes_all(boxes):
+def _print_boxes_all(boxes, verbose):
     for key, value in boxes.items():
-        print(key)
+        if verbose:
+            print('key (page)', key)
         for kk, vv in value.items():
-            print(kk)
+            if verbose:
+                print('part of page:', kk)
             for box in vv:
-                print('-'*60)
-                print(box.x0, box.x1, box.y0, box.y1)
+                if verbose:
+                    print('-'*60)
+                    print(box.x0, box.x1, box.y0, box.y1)
                 print(box.text)
 
 
-def _fill_boxes(LTPage, VERTICAL, HORIZONTAL, boxes, page_nr):
-    VERTICAL, HORIZONTAL = _get_page_layout(LTPage, VERTICAL, HORIZONTAL)
-    NR_OF_COLS, X0_MIN, X1_MAX, BOX_WIDTH_MAX, Y_HEADER =\
-            _get_page_parameters(LTPage)
+def _fill_boxes(LTPage, boxes, page_nr, verbose):
+    NR_OF_COLS, X1_MAX, BOX_WIDTH_MAX, Y_HEADER, UPPER_PAGE_EDGE, SIDE_PAGE_EDGE =\
+            _get_page_parameters(LTPage, verbose)
     boxes[page_nr] = dict()
-    boxes = _init_boxes(Y_HEADER, NR_OF_COLS, page_nr, boxes)
+    boxes = _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes)
 
     for LTLine in LTPage:
         try:
@@ -387,17 +405,22 @@ def _fill_boxes(LTPage, VERTICAL, HORIZONTAL, boxes, page_nr):
         x0, x1, y0, y1 = _get_box_borders(LTLine)
 
         box = namedtuple('box', ['x0', 'x1', 'y0', 'y1', 'text'])
+        if verbose:
+            print('Deciding which part of the page: header or columns ...')
+            print(y0, Y_HEADER)
         if y0 >= Y_HEADER:
             boxes[page_nr]['header'].append(box(x0, x1, y0, y1, text))
+            if verbose:
+                print('--> header')
         elif NR_OF_COLS == 1:
             boxes[page_nr]['column'].append(box(x0, x1, y0, y1, text))
         elif NR_OF_COLS == 2:
-            if x0 < (X0_MIN + BOX_WIDTH_MAX):
+            if x0 < BOX_WIDTH_MAX:
                 boxes[page_nr]['left_column'].append(box(x0, x1, y0, y1, text))
             else:
                 boxes[page_nr]['right_column'].append(box(x0, x1, y0, y1, text))
         elif NR_OF_COLS == 3:
-            col = _choose_col(x0, x1, X0_MIN, X1_MAX, BOX_WIDTH_MAX)
+            col = _choose_col(x0, x1, SIDE_PAGE_EDGE, BOX_WIDTH_MAX, verbose)
             boxes[page_nr][col].append(box(x0, x1, y0, y1, text))
         else:
             break
@@ -405,9 +428,12 @@ def _fill_boxes(LTPage, VERTICAL, HORIZONTAL, boxes, page_nr):
     return boxes
 
 
-def _get_page_parameters(LTPage):
-    BOX_WIDTH_MAX = Y_HEADER = BOX_UPPER_Y = 0
-    box_upper_y = list()
+def _get_page_parameters(LTPage, verbose):
+    SIDE_PAGE_EDGE = round(LTPage.bbox[2])
+    UPPER_PAGE_EDGE = round(LTPage.bbox[3])
+    Y_HEADER = UPPER_PAGE_EDGE
+    box = namedtuple('box', ['x0', 'x1', 'y0', 'y1'])
+    box_parameters = list()
     X0_MIN = X1_MAX = Y0_MIN = Y0_MAX = Y1_MAX = 0
 
     for LTLine in LTPage:
@@ -418,25 +444,36 @@ def _get_page_parameters(LTPage):
         Y0_MAX = _get_Y0_MAX(y0, Y0_MAX)
         Y1_MAX = _get_Y1_MAX(y1, Y1_MAX)
 
-        BOX_WIDTH_MAX = _get_box_width(BOX_WIDTH_MAX, Y0_MAX, x0, x1, y0, y1)
-        Y_HEADER = _get_y_header(Y_HEADER, x0, x1, y0, y1, Y0_MAX, BOX_WIDTH_MAX)
+        box_parameters.append(box(x0, x1, y0, y1))
 
-        if y1 < Y_HEADER:
-            box_upper_y.append((y0, y1))
-
-        Y_HEADER = _correct_y_header(box_upper_y, Y_HEADER)
-
+    Y_HEADER = _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose)
+    BOX_WIDTH_MAX = _get_box_width(box_parameters, Y_HEADER)
     PAGE_WIDTH = X1_MAX - X0_MIN
+
     if PAGE_WIDTH > 0:
-        NR_OF_COLS = PAGE_WIDTH//BOX_WIDTH_MAX
+        NR_OF_COLS = round(PAGE_WIDTH/BOX_WIDTH_MAX)
     else:
         NR_OF_COLS = 0
 
-    return NR_OF_COLS, X0_MIN, X1_MAX, BOX_WIDTH_MAX, Y_HEADER
+    if verbose:
+        _print_page_parameters(X0_MIN, X1_MAX, Y0_MIN, Y0_MAX, Y1_MAX,\
+                box_parameters, SIDE_PAGE_EDGE, UPPER_PAGE_EDGE,\
+                BOX_WIDTH_MAX, Y_HEADER, NR_OF_COLS)
+
+    if _only_one_box(box_parameters, NR_OF_COLS):
+        Y_HEADER = UPPER_PAGE_EDGE
+    elif _only_one_box(box_parameters, NR_OF_COLS) == None:
+        print('Error needs to be defined')
+        raise
+    else:
+        if _all_boxes_aligned(box_parameters, NR_OF_COLS):
+            Y_HEADER = UPPER_PAGE_EDGE
+
+    return NR_OF_COLS, X1_MAX, BOX_WIDTH_MAX, Y_HEADER, UPPER_PAGE_EDGE, SIDE_PAGE_EDGE
 
 
-def _init_boxes(Y_HEADER, NR_OF_COLS, page_nr, boxes):
-    if Y_HEADER > 0:
+def _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes):
+    if Y_HEADER > 0 and Y_HEADER < UPPER_PAGE_EDGE:
         boxes[page_nr]['header'] = list()
     if NR_OF_COLS == 1:
         boxes[page_nr]['column'] = list()
@@ -455,137 +492,106 @@ def _init_boxes(Y_HEADER, NR_OF_COLS, page_nr, boxes):
     return boxes
 
 
-def _get_box_borders(LTLine):
-    x0 = LTLine.x0
-    x0 = round(x0)
-    x1 = LTLine.x1
-    x1 = round(x1)
-    y0 = LTLine.y0
-    y0 = round(y0)
-    y1 = LTLine.y1
-    y1 = round(y1)
-
-    return x0, x1, y0, y1
-
-
-def _get_page_layout(LTPage, VERTICAL, HORIZONTAL):
-    height = LTPage.height
-    width = LTPage.width
-    if height > width and not HORIZONTAL:
-        VERTICAL = True
-    elif height > width and HORIZONTAL:
-        print('PDF document mixes horizontal and vertical pages')
-        VERTICAL = True
-        HORIZONTAL = False
-    elif height < width and not VERTICAL:
-        HORIZONTAL = True
-    elif height < width and VERTICAL:
-        print('PDF document mixes horizontal and vertical pages')
-        VERTICAL = False
-        HORIZONTAL = True
-    else:
-        print('height and width are same length?')
-        print(height, width)
-
-    return VERTICAL, HORIZONTAL
-
-
-def _get_X0_MIN(x0, X0_MIN):
-    if X0_MIN == 0:
-        X0_MIN = x0
-    else:
-        if 0 < x0 < X0_MIN:
-            X0_MIN = x0
-
-    return X0_MIN
-
-
-def _get_X1_MAX(x1, X1_MAX):
-    if X1_MAX == 0:
-        X1_MAX = x1
-    else:
-        if x1 > X1_MAX > 0:
-            X1_MAX = x1
-
-    return X1_MAX
-
-
-def _get_Y0_MIN(y0, Y0_MIN):
-    if Y0_MIN == 0:
-        Y0_MIN = y0
-    else:
-        if 0 < y0 < Y0_MIN:
-            Y0_MIN = y0
-
-    return Y0_MIN
-
-
-def _get_Y0_MAX(y0, Y0_MAX):
-    if Y0_MAX == 0:
-        Y0_MAX = y0
-    else:
-        if y0 > Y0_MAX > 0:
-            Y0_MAX = y0
-
-    return Y0_MAX
-
-
-def _get_Y1_MAX(y1, Y1_MAX):
-    if Y1_MAX == 0:
-        Y1_MAX = y1
-    else:
-        if y1 > Y1_MAX > 0:
-            Y1_MAX = y1
-
-    return Y1_MAX
-
-
-def _choose_col(x0, x1, X0_MIN, X1_MAX, BOX_WIDTH_MAX):
-    if x0 < (X0_MIN + BOX_WIDTH_MAX):
+def _choose_col(x0, x1, SIDE_PAGE_EDGE, BOX_WIDTH_MAX, verbose):
+    if x0 < BOX_WIDTH_MAX and x1 < 2*BOX_WIDTH_MAX:
         col = 'left_column'
-    elif x0 > (X0_MIN + BOX_WIDTH_MAX) and x1 < (X1_MAX - BOX_WIDTH_MAX):
+    elif x0 > BOX_WIDTH_MAX and x1 < (SIDE_PAGE_EDGE - BOX_WIDTH_MAX):
         col = 'center_column'
     else:
         col = 'right_column'
 
+    if verbose:
+        print(x0, x1, BOX_WIDTH_MAX, col)
     return col
 
 
-def _get_box_width(BOX_WIDTH_MAX, Y0_MAX, x0, x1, y0, y1):
+def _get_box_width(box_parameters, Y_HEADER):
+    BOX_WIDTH_MAX = 0
+    for box in box_parameters:
+        if box.y0 < Y_HEADER:
+            if (box.x1 - box.x0) > BOX_WIDTH_MAX:
+                if box.y0 < box.y1:
+                    BOX_WIDTH_MAX = box.x1 - box.x0
+
     if BOX_WIDTH_MAX == 0:
-        BOX_WIDTH_MAX = x1 - x0
-    elif (x1 - x0) > BOX_WIDTH_MAX and y0 < y1 < Y0_MAX:
-        BOX_WIDTH_MAX = x1 - x0
+        for box in box_parameters:
+            if (box.x1 - box.x0) > BOX_WIDTH_MAX:
+                BOX_WIDTH_MAX = box.x1 - box.x0
 
     return BOX_WIDTH_MAX
 
 
-def _get_y_header(Y_HEADER, x0, x1, y0, y1, Y0_MAX, BOX_WIDTH_MAX):
-    if y1 >= Y0_MAX:
-        if Y_HEADER == 0:
-            Y_HEADER = y0
-        elif (x1 - x0) > BOX_WIDTH_MAX:
-            Y_HEADER = y0
+def _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose):
+    headers = list()
 
+    for box in box_parameters:
+        if box.y1 == Y1_MAX:
+            headers.append(box)
+
+    y0 = Y1_MAX
+    for box in headers:
+        if box.y0 < y0:
+            y0 = box.y0
+
+    Y_HEADER = y0
+
+    if verbose:
+        print(box_parameters)
+        print('Y_HEADER', Y_HEADER)
     return Y_HEADER
 
 
-def _correct_y_header(box_upper_y, Y_HEADER):
-    yise = dict()
-    for y in box_upper_y:
-        try:
-            if yise[y[0]] > 0:
-                i = yise[y]
-                yise[y] = i+1
-        except KeyError:
-            yise[y] = 1
+def _only_one_box(box_parameters, NR_OF_COLS):
+    if len(box_parameters) == NR_OF_COLS:
+        x0 = x1 = 0
+        y1 = 0
+        for box in box_parameters:
+            if x1 == 0:
+                x0 = box.x0
+                x1 = box.x1
+                y1 = box.y1
+            else:
+                if x0 == box.x0 and x1 == box.x1:
+                    pass
+                elif y1 == box.y1:
+                    pass
+                else:
+                    return False
+        return True
+    elif len(box_parameters) == 1:
+        return True
+    elif len(box_parameters) > 1:
+        return False
+    else:
+        print('page without columns')
+        raise
+        return None
 
-    s = [{y: yise[y]} for y in sorted(yise, key=yise.get, reverse=True)]
-    if s:
-        for key in s[0].keys():
-            Y_HEADER = key[-1]
 
-    return Y_HEADER
+def _all_boxes_aligned(box_parameters, NR_OF_COLS):
+    x0 = x1 = None
+    y1 = None
+    if len(box_parameters) > NR_OF_COLS:           # vertical alignment
+        for box in box_parameters:
+            if x0 == x1 == None:
+                x0 = box.x0
+                x1 = box.x1
+            else:
+                if x0 == box.x0 and x1 == box.x1:
+                    pass
+                else:
+                    return False
+
+    elif len(box_parameters) <= NR_OF_COLS:        # horizontal alignment
+        for box in box_parameters:
+            if y1 == None:
+                y1 = box.y1
+            else:
+                if y1 == box.y1:
+                    pass
+                else:
+                    return False
+    return True
 
 
 def _find_start_and_end_page(LTPage, page_from, page_to, token_start, token_end):
@@ -640,6 +646,111 @@ def _find_start_and_end_page(LTPage, page_from, page_to, token_start, token_end)
                 token = True
 
     return token_start, token_end
+
+
+def _get_box_borders(LTLine):
+    x0 = LTLine.x0
+    x0 = round(x0)
+    x1 = LTLine.x1
+    x1 = round(x1)
+    y0 = LTLine.y0
+    y0 = round(y0)
+    y1 = LTLine.y1
+    y1 = round(y1)
+
+    return x0, x1, y0, y1
+
+
+def _get_X0_MIN(x0, X0_MIN):
+    if X0_MIN == 0:
+        X0_MIN = x0
+    else:
+        if 0 < x0 < X0_MIN:
+            X0_MIN = x0
+
+    return X0_MIN
+
+
+def _get_X1_MAX(x1, X1_MAX):
+    if X1_MAX == 0:
+        X1_MAX = x1
+    else:
+        if x1 > X1_MAX > 0:
+            X1_MAX = x1
+
+    return X1_MAX
+
+
+def _get_Y0_MIN(y0, Y0_MIN):
+    if Y0_MIN == 0:
+        Y0_MIN = y0
+    else:
+        if 0 < y0 < Y0_MIN:
+            Y0_MIN = y0
+
+    return Y0_MIN
+
+
+def _get_Y0_MAX(y0, Y0_MAX):
+    if Y0_MAX == 0:
+        Y0_MAX = y0
+    else:
+        if y0 > Y0_MAX > 0:
+            Y0_MAX = y0
+
+    return Y0_MAX
+
+
+def _get_Y1_MAX(y1, Y1_MAX):
+    if Y1_MAX == 0:
+        Y1_MAX = y1
+    else:
+        if y1 > Y1_MAX > 0:
+            Y1_MAX = y1
+
+    return Y1_MAX
+
+
+def _print_page_parameters(X0_MIN, X1_MAX, Y0_MIN, Y0_MAX, Y1_MAX,\
+        box_parameters, SIDE_PAGE_EDGE, UPPER_PAGE_EDGE, BOX_WIDTH_MAX,\
+        Y_HEADER, NR_OF_COLS):
+    print('*'*60)
+    print('X0_MIN', X0_MIN)
+    print('X1_MAX', X1_MAX)
+    print('Y0_MIN', Y0_MIN)
+    print('Y0_MAX', Y0_MAX)
+    print('Y1_MAX', Y1_MAX)
+    print(box_parameters)
+    print('page edges', SIDE_PAGE_EDGE, UPPER_PAGE_EDGE)
+    print('BOX_WIDTH_MAX', BOX_WIDTH_MAX)
+    print('Y_HEADER', Y_HEADER)
+    print('UPPER_PAGE_EDGE', UPPER_PAGE_EDGE)
+    print('NR_OF_COLS', NR_OF_COLS)
+    print('Only one box per column?')
+    print('\t\t\t', _only_one_box(box_parameters, NR_OF_COLS))
+    print()
+
+
+def _get_page_layout(LTPage, VERTICAL, HORIZONTAL):
+    height = LTPage.height
+    width = LTPage.width
+    if height > width and not HORIZONTAL:
+        VERTICAL = True
+    elif height > width and HORIZONTAL:
+        print('PDF document mixes horizontal and vertical pages')
+        VERTICAL = True
+        HORIZONTAL = False
+    elif height < width and not VERTICAL:
+        HORIZONTAL = True
+    elif height < width and VERTICAL:
+        print('PDF document mixes horizontal and vertical pages')
+        VERTICAL = False
+        HORIZONTAL = True
+    else:
+        print('height and width are same length?')
+        print(height, width)
+
+    return VERTICAL, HORIZONTAL
 
 
 if __name__ == '__main__':

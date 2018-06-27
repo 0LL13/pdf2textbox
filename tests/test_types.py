@@ -39,23 +39,3 @@ def test_textbox_structure():
             assert subkey in ['header', 'left_column', 'right_column']
             assert isinstance(subval, list)
 
-
-def test_get_page_layout():
-    '''assert that parameters VERTICAL and HORIZONTAL are boolean'''
-
-    file_loc = '../pdf2textbox/src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
-    with open(file_loc, 'br') as pdf:
-        parser = PDFParser(pdf)
-        document = PDFDocument(parser, password=None)
-        rsrcmgr = PDFResourceManager()
-        laparams = LAParams()
-        device = PDFPageAggregator(rsrcmgr, laparams=laparams)
-        interpreter = PDFPageInterpreter(rsrcmgr, device)
-        VERTICAL = HORIZONTAL = False
-
-        for page in PDFPage.create_pages(document):
-            interpreter.process_page(page)
-            LTPage = device.get_result()
-            VERTICAL, HORIZONTAL = _get_page_layout(LTPage, VERTICAL, HORIZONTAL)
-            assert isinstance(VERTICAL, bool)
-            assert isinstance(HORIZONTAL, bool)

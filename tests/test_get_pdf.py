@@ -32,9 +32,14 @@ def test_get_local_file():
     '''local PDF files should exist'''
 
     pdf_locs = ['../pdf2textbox/src/pdf2textbox/data/three_col_horizontal.pdf',
-                '../pdf2textbox/src/pdf2textbox/data/three_col_vertical.pdf',
                 '../pdf2textbox/src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf',
                 '../pdf2textbox/src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf']
+                '..pdf2textbox/src/pdf2textbox/data/01a_only_text.pdf'
+                '..pdf2textbox/src/pdf2textbox/data/02a_two_cols.pdf'
+                '..pdf2textbox/src/pdf2textbox/data/03a_three_cols.pdf'
+                '..pdf2textbox/src/pdf2textbox/data/04a_text_and_header.pdf'
+                '..pdf2textbox/src/pdf2textbox/data/05a_two_cols_and_header.pdf'
+                '..pdf2textbox/src/pdf2textbox/data/06a_three_cols_and_header.pdf'
 
     for loc in pdf_locs:
         assert os.path.isfile(loc)
