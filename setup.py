@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name = 'pdf2textbox',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    version = '0.1.9',
+    version = '0.2.0',
     description = 'A PDF-to-text converter based on pdfminer2',
     long_description = "The pdf2textbox converter aims at converting PDF with up to\
                         three columns and a header into text without loosing too\

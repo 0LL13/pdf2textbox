@@ -21,7 +21,7 @@ URL="." node[shape="box"]
 "input.func_w0401_package.thing2" -> "input.func_w0401_package.all_the_things" [];
 "input.func_w0401_package.all_the_things" -> "input.func_w0401_package.thing1" [];
 "input.func_w0401_package.all_the_things" -> "input.func_w0401_package.thing2" [];
-"input.func_w0401" -> "input.w0401_cycle" [];
 "input.func_w0401_disabled" -> "input.w0401_cycle" [];
 "input.func_w0401_disabled_in_func" -> "input.w0401_cycle" [];
+"input.func_w0401" -> "input.w0401_cycle" [];
 }

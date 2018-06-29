@@ -28,11 +28,10 @@ from optparse import OptionParser
 
 def main():
     '''
-    A wrapper function to organize the steps involved to convert a PDF into text:
+    A wrapper function to organize the steps involved to convert a PDF doc into text:
         1.  Get the PDF file using either a URL or a locally stored file location
         2.  Check argument if the PDF will be sliced (i.e. use only part of PDF file)
-        3.1 If option --slice: get the start and end page number
-        3.2 Determine page layout
+        3.  If option --slice: get the start and end page number
         4.  Move text and page parameters into a fitting dictionary
     '''
 
@@ -282,7 +281,7 @@ def _pdf_to_text_slice(pdf, page_from, page_to, verbose):
                     page_to, token_start, token_end)
 
         if token_start:
-            boxes = _fill_boxes(LTPage, boxes, page_nr)
+            boxes = _fill_boxes(LTPage, boxes, page_nr, verbose)
         if token_end:
             token_start = False
             token_end = False

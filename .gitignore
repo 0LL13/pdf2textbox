@@ -6,3 +6,4 @@ bin/
 lib/
 archive/
 ./tox
+.coverage

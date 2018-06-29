@@ -31,14 +31,15 @@ def test_get_url():
 def test_get_local_file():
     '''local PDF files should exist'''
 
-    pdf_locs = ['../pdf2textbox/src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf',
-                '../pdf2textbox/src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf',
-                '../pdf2textbox/src/pdf2textbox/data/01a_only_text.pdf',
-                '../pdf2textbox/src/pdf2textbox/data/02a_two_cols.pdf',
-                '../pdf2textbox/src/pdf2textbox/data/03a_three_cols.pdf',
-                '../pdf2textbox/src/pdf2textbox/data/04a_text_and_header.pdf',
-                '../pdf2textbox/src/pdf2textbox/data/05a_two_cols_and_header.pdf',
-                '../pdf2textbox/src/pdf2textbox/data/06a_three_cols_and_header.pdf']
+    loc = '../pdf2textbox/src/pdf2textbox/data'
+    pdf_locs = ['{}/Id=MMP16%2F139_14622_14624.pdf'.format(loc),
+                '{}/Id=MMP15%2F57_5694_5696.pdf'.format(loc),
+                '{}/01a_only_text.pdf'.format(loc),
+                '{}/02a_two_cols.pdf'.format(loc),
+                '{}/03a_three_cols.pdf'.format(loc),
+                '{}/04a_text_and_header.pdf'.format(loc),
+                '{}/05a_two_cols_and_header.pdf'.format(loc),
+                '{}/06a_three_cols_and_header.pdf'.format(loc)]
 
     for loc in pdf_locs:
         assert os.path.isfile(loc)
@@ -56,7 +57,8 @@ def test_get_pdf_file_url():
 def test_get_pdf_file_local():
     '''using local file test if type pdf is io.BufferedReader'''
 
-    pdf_loc = '../pdf2textbox/src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
-    pdf = _get_pdf_file(pdf_loc, verbose=False)
+    loc = '../pdf2textbox/src/pdf2textbox/data'
+    pdf_loc = '{}/Id=MMP15%2F57_5694_5696.pdf'.format(loc)
 
+    pdf = _get_pdf_file(pdf_loc, verbose=False)
     assert isinstance(pdf, io.BufferedReader)
