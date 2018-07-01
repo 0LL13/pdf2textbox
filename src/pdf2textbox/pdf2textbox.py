@@ -26,7 +26,7 @@ from collections import namedtuple
 from optparse import OptionParser
 
 
-def main():
+def pdf2textbox():
     '''
     A wrapper function to organize the steps involved to convert a PDF doc into text:
         1.  Get the PDF file using either a URL or a locally stored file location
@@ -745,4 +745,4 @@ def _get_page_layout(LTPage, VERTICAL, HORIZONTAL):
 
 
 if __name__ == '__main__':
-    main()
+    pdf2textbox()
