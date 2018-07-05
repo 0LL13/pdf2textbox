@@ -24,7 +24,8 @@ if start and end page cannot be found - user input is requested.
 Installation
 ------------
 
-pip install pdf2textbox
+    pip install pdf2textbox
+
 
 Contribute
 ----------

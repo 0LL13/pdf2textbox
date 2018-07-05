@@ -1,0 +1,9 @@
+actionid: py34
+msg: getenv
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6', '-m', 'virtualenv', '--python', '/usr/local/bin/python3.4', 'py34']
+
+Using base prefix '/usr/local'
+New python executable in /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py34/bin/python3.4
+Also creating executable in /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py34/bin/python
+Installing setuptools, pip, wheel...done.
+Running virtualenv with interpreter /usr/local/bin/python3.4

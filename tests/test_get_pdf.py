@@ -2,7 +2,7 @@ import io
 import os
 import re
 
-from src.pdf2textbox.pdf2textbox import _get_pdf_file
+from pdf2textbox.pdf2textbox import _get_pdf_file
 
 
 def test_get_url():
@@ -31,7 +31,7 @@ def test_get_url():
 def test_get_local_file():
     '''local PDF files should exist'''
 
-    loc = '../pdf2textbox/src/pdf2textbox/data'
+    loc = '../pdf2textbox/pdf2textbox/data'
     pdf_locs = ['{}/Id=MMP16%2F139_14622_14624.pdf'.format(loc),
                 '{}/Id=MMP15%2F57_5694_5696.pdf'.format(loc),
                 '{}/01a_only_text.pdf'.format(loc),
@@ -57,7 +57,7 @@ def test_get_pdf_file_url():
 def test_get_pdf_file_local():
     '''using local file test if type pdf is io.BufferedReader'''
 
-    loc = '../pdf2textbox/src/pdf2textbox/data'
+    loc = '../pdf2textbox/pdf2textbox/data'
     pdf_loc = '{}/Id=MMP15%2F57_5694_5696.pdf'.format(loc)
 
     pdf = _get_pdf_file(pdf_loc, verbose=False)

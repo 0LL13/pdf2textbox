@@ -1,0 +1,13 @@
+actionid: py34
+msg: installpkg
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py34/bin/pip', 'install', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist/pdf2textbox-0.2.4.zip']
+
+pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Processing ./.tox/dist/pdf2textbox-0.2.4.zip
+Building wheels for collected packages: pdf2textbox
+  Running setup.py bdist_wheel for pdf2textbox: started
+  Running setup.py bdist_wheel for pdf2textbox: finished with status 'done'
+  Stored in directory: /home/frodo/.cache/pip/wheels/f5/1c/e9/c9da4762b3a7bdbde42541ee8e5ae48af76b466847041eaec9
+Successfully built pdf2textbox
+Installing collected packages: pdf2textbox
+Successfully installed pdf2textbox-0.2.4

@@ -2,9 +2,9 @@ import io
 import os
 import pytest
 
-from src.pdf2textbox.pdf2textbox import _get_pages
-from src.pdf2textbox.pdf2textbox import _get_pdf_file
-from src.pdf2textbox.pdf2textbox import _pdf_to_text_slice
+from pdf2textbox.pdf2textbox import _get_pages
+from pdf2textbox.pdf2textbox import _get_pdf_file
+from pdf2textbox.pdf2textbox import _pdf_to_text_slice
 
 
 @pytest.fixture()
@@ -23,7 +23,7 @@ def test_cmd_option_slice(cmd_option_slice):
 def test_get_pages(cmd_option_slice):
     '''test command line options'''
 
-    loc = '../pdf2textbox/src/pdf2textbox/data'
+    loc = '../pdf2textbox/pdf2textbox/data'
     pdf_loc = '{}/Id=MMP16%2F139_14622_14624.pdf'.format(loc)
 
     page_from, page_to = _get_pages(pdf_loc, verbose=False)
@@ -35,7 +35,7 @@ def test_get_pages(cmd_option_slice):
 def test_pdf_to_text_slice(cmd_option_slice):
     '''assert that sliced PDF file will be returned in a dictionary'''
 
-    loc = '../pdf2textbox/src/pdf2textbox/data'
+    loc = '../pdf2textbox/pdf2textbox/data'
     pdf_loc = '{}/Id=MMP16%2F139_14622_14624.pdf'.format(loc)
 
     pdf = _get_pdf_file(pdf_loc, verbose=False)

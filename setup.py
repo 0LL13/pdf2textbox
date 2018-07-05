@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'pdf2textbox',
-    packages=['src/pdf2textbox/'],
-    version = '0.2.3',
+    packages=['pdf2textbox/'],
+    version = '0.2.4',
     description = 'A PDF-to-text converter based on pdfminer2',
     long_description = "The pdf2textbox converter aims at converting PDF with up to\
                         three columns and a header into text without loosing too\

@@ -1,10 +1,10 @@
 actionid: py36
 msg: getenv
-cmdargs: ['/home/sam/projects/vEnvs/pdf2textbox/bin/python3', '-m', 'virtualenv', '--python', '/home/sam/projects/vEnvs/pdf2textbox/bin/python3.6', 'py36']
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6', '-m', 'virtualenv', '--python', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6', 'py36']
 
+Already using interpreter /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6
 Using real prefix '/usr'
-Path not in prefix '/home/sam/projects/vEnvs/pdf2textbox/include/python3.6m' '/usr'
-New python executable in /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py36/bin/python3.6
-Also creating executable in /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py36/bin/python
+Path not in prefix '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/include/python3.6m' '/usr'
+New python executable in /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py36/bin/python3.6
+Also creating executable in /home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py36/bin/python
 Installing setuptools, pip, wheel...done.
-Running virtualenv with interpreter /home/sam/projects/vEnvs/pdf2textbox/bin/python3.6

@@ -1,10 +1,10 @@
 import io
 import os
 
-from src.pdf2textbox.pdf2textbox import _get_pdf_file
-from src.pdf2textbox.pdf2textbox import _pdf_to_text_slice
-from src.pdf2textbox.pdf2textbox import _pdf_to_text_all
-from src.pdf2textbox.pdf2textbox import _get_page_layout
+from pdf2textbox.pdf2textbox import _get_pdf_file
+from pdf2textbox.pdf2textbox import _pdf_to_text_slice
+from pdf2textbox.pdf2textbox import _pdf_to_text_all
+from pdf2textbox.pdf2textbox import _get_page_layout
 
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import PDFPageAggregator
@@ -18,7 +18,7 @@ from pdfminer.pdfdocument import PDFDocument, PDFNoOutlines
 def test_pdf_to_text_all():
     '''test type textbox is dict'''
 
-    file_loc = '../pdf2textbox/src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
+    file_loc = '../pdf2textbox/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
     with open(file_loc, 'br') as pdf:
         textbox = _pdf_to_text_all(pdf, verbose=False)
 
@@ -28,7 +28,7 @@ def test_pdf_to_text_all():
 def test_textbox_structure():
     '''test if textbox contains pages, header, left and right column'''
 
-    file_loc = '../pdf2textbox/src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
+    file_loc = '../pdf2textbox/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
     with open(file_loc, 'br') as pdf:
         textbox = _pdf_to_text_all(pdf, verbose=False)
 

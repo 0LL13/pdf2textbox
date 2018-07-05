@@ -1,6 +1,6 @@
 actionid: tox
 msg: packaging
-cmdargs: ['/home/sam/projects/vEnvs/pdf2textbox/bin/python3', local('/home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/setup.py'), 'sdist', '--formats=zip', '--dist-dir', local('/home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/dist')]
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/bin/python3.6', local('/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/setup.py'), 'sdist', '--formats=zip', '--dist-dir', local('/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist')]
 
 running sdist
 running egg_info
@@ -9,142 +9,155 @@ writing dependency_links to pdf2textbox.egg-info/dependency_links.txt
 writing top-level names to pdf2textbox.egg-info/top_level.txt
 reading manifest file 'pdf2textbox.egg-info/SOURCES.txt'
 reading manifest template 'MANIFEST.in'
-warning: no files found matching 'LICENSE'
-warning: no directories found matching 'doc'
 warning: no previously-included files matching '__pycache__' found anywhere in distribution
 writing manifest file 'pdf2textbox.egg-info/SOURCES.txt'
 running check
-creating pdf2textbox-0.1.2
-creating pdf2textbox-0.1.2/pdf2textbox.egg-info
-creating pdf2textbox-0.1.2/src
-creating pdf2textbox-0.1.2/src/pdf2textbox
-creating pdf2textbox-0.1.2/src/pdf2textbox/data
-creating pdf2textbox-0.1.2/src/pdf2textbox/docs
-creating pdf2textbox-0.1.2/src/pdf2textbox/docs/_build
-creating pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/doctrees
-creating pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html
-creating pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_sources
-creating pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-creating pdf2textbox-0.1.2/tests
-copying files to pdf2textbox-0.1.2...
-copying MANIFEST.in -> pdf2textbox-0.1.2
-copying README.rst -> pdf2textbox-0.1.2
-copying setup.py -> pdf2textbox-0.1.2
-copying tox.ini -> pdf2textbox-0.1.2
-copying pdf2textbox.egg-info/PKG-INFO -> pdf2textbox-0.1.2/pdf2textbox.egg-info
-copying pdf2textbox.egg-info/SOURCES.txt -> pdf2textbox-0.1.2/pdf2textbox.egg-info
-copying pdf2textbox.egg-info/dependency_links.txt -> pdf2textbox-0.1.2/pdf2textbox.egg-info
-copying pdf2textbox.egg-info/top_level.txt -> pdf2textbox-0.1.2/pdf2textbox.egg-info
-copying src/pdf2textbox/LICENSE.txt -> pdf2textbox-0.1.2/src/pdf2textbox
-copying src/pdf2textbox/__init__.py -> pdf2textbox-0.1.2/src/pdf2textbox
-copying src/pdf2textbox/pdf2textbox.py -> pdf2textbox-0.1.2/src/pdf2textbox
-copying src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf -> pdf2textbox-0.1.2/src/pdf2textbox/data
-copying src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf -> pdf2textbox-0.1.2/src/pdf2textbox/data
-copying src/pdf2textbox/docs/Makefile -> pdf2textbox-0.1.2/src/pdf2textbox/docs
-copying src/pdf2textbox/docs/conf.py -> pdf2textbox-0.1.2/src/pdf2textbox/docs
-copying src/pdf2textbox/docs/index.rst -> pdf2textbox-0.1.2/src/pdf2textbox/docs
-copying src/pdf2textbox/docs/_build/doctrees/environment.pickle -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/doctrees
-copying src/pdf2textbox/docs/_build/doctrees/index.doctree -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/doctrees
-copying src/pdf2textbox/docs/_build/html/.buildinfo -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html
-copying src/pdf2textbox/docs/_build/html/.nojekyll -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html
-copying src/pdf2textbox/docs/_build/html/genindex.html -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html
-copying src/pdf2textbox/docs/_build/html/index.html -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html
-copying src/pdf2textbox/docs/_build/html/objects.inv -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html
-copying src/pdf2textbox/docs/_build/html/search.html -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html
-copying src/pdf2textbox/docs/_build/html/searchindex.js -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html
-copying src/pdf2textbox/docs/_build/html/_sources/index.rst.txt -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_sources
-copying src/pdf2textbox/docs/_build/html/_static/ajax-loader.gif -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/alabaster.css -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/basic.css -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/comment-bright.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/comment-close.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/comment.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/custom.css -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/doctools.js -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/down-pressed.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/down.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/file.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/jquery.js -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/minus.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/plus.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/pygments.css -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/searchtools.js -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/underscore.js -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/up-pressed.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/up.png -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying src/pdf2textbox/docs/_build/html/_static/websupport.js -> pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static
-copying tests/__init__.py -> pdf2textbox-0.1.2/tests
-copying tests/tags -> pdf2textbox-0.1.2/tests
-copying tests/test_content.py -> pdf2textbox-0.1.2/tests
-copying tests/test_types.py -> pdf2textbox-0.1.2/tests
-copying tests/ttest_content.py -> pdf2textbox-0.1.2/tests
-Writing pdf2textbox-0.1.2/setup.cfg
-creating '.tox/dist/pdf2textbox-0.1.2.zip' and adding 'pdf2textbox-0.1.2' to it
-adding 'pdf2textbox-0.1.2/setup.py'
-adding 'pdf2textbox-0.1.2/README.rst'
-adding 'pdf2textbox-0.1.2/MANIFEST.in'
-adding 'pdf2textbox-0.1.2/tox.ini'
-adding 'pdf2textbox-0.1.2/PKG-INFO'
-adding 'pdf2textbox-0.1.2/setup.cfg'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/SOURCES.txt'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/dependency_links.txt'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/top_level.txt'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/PKG-INFO'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/__init__.py'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/LICENSE.txt'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/pdf2textbox.py'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/conf.py'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/index.rst'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/Makefile'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/doctrees/index.doctree'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/doctrees/environment.pickle'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/searchindex.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/objects.inv'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/.buildinfo'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/genindex.html'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/search.html'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/.nojekyll'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/index.html'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_sources/index.rst.txt'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/basic.css'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/searchtools.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment-bright.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/alabaster.css'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/minus.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/doctools.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/ajax-loader.gif'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/websupport.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/plus.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/custom.css'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/down.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment-close.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/down-pressed.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/jquery.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/up-pressed.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/up.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/underscore.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/file.png'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/pygments.css'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/comment.png'
-<<<<<<< HEAD
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/searchtools.js'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_static/ajax-loader.gif'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/docs/_build/html/_sources/index.rst.txt'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/data/Id=MMP16%2F139|14622|14624.pdf'
-adding 'pdf2textbox-0.1.2/src/pdf2textbox/data/Id=MMP15%2F57|5694|5696.pdf'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/PKG-INFO'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/top_level.txt'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/dependency_links.txt'
-adding 'pdf2textbox-0.1.2/pdf2textbox.egg-info/SOURCES.txt'
-adding 'pdf2textbox-0.1.2/tests/ttest_content.py'
-adding 'pdf2textbox-0.1.2/tests/__init__.py'
-adding 'pdf2textbox-0.1.2/tests/tags'
-=======
->>>>>>> 2f5a1b4853a844baa50e12ab1ae1bd3eadb01742
-adding 'pdf2textbox-0.1.2/tests/test_types.py'
-adding 'pdf2textbox-0.1.2/tests/tags'
-adding 'pdf2textbox-0.1.2/tests/__init__.py'
-adding 'pdf2textbox-0.1.2/tests/test_content.py'
-removing 'pdf2textbox-0.1.2' (and everything under it)
+warning: check: missing required meta-data: url
+
+creating pdf2textbox-0.2.4
+creating pdf2textbox-0.2.4/pdf2textbox
+creating pdf2textbox-0.2.4/pdf2textbox.egg-info
+creating pdf2textbox-0.2.4/pdf2textbox/data
+creating pdf2textbox-0.2.4/pdf2textbox/docs
+creating pdf2textbox-0.2.4/pdf2textbox/docs/_build
+creating pdf2textbox-0.2.4/pdf2textbox/docs/_build/doctrees
+creating pdf2textbox-0.2.4/pdf2textbox/docs/_build/html
+creating pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_sources
+creating pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+creating pdf2textbox-0.2.4/tests
+copying files to pdf2textbox-0.2.4...
+copying LICENSE -> pdf2textbox-0.2.4
+copying MANIFEST.in -> pdf2textbox-0.2.4
+copying README.rst -> pdf2textbox-0.2.4
+copying setup.py -> pdf2textbox-0.2.4
+copying tox.ini -> pdf2textbox-0.2.4
+copying pdf2textbox/LICENSE.txt -> pdf2textbox-0.2.4/pdf2textbox
+copying pdf2textbox/__init__.py -> pdf2textbox-0.2.4/pdf2textbox
+copying pdf2textbox/pdf2textbox.py -> pdf2textbox-0.2.4/pdf2textbox
+copying pdf2textbox/tags -> pdf2textbox-0.2.4/pdf2textbox
+copying pdf2textbox.egg-info/PKG-INFO -> pdf2textbox-0.2.4/pdf2textbox.egg-info
+copying pdf2textbox.egg-info/SOURCES.txt -> pdf2textbox-0.2.4/pdf2textbox.egg-info
+copying pdf2textbox.egg-info/dependency_links.txt -> pdf2textbox-0.2.4/pdf2textbox.egg-info
+copying pdf2textbox.egg-info/top_level.txt -> pdf2textbox-0.2.4/pdf2textbox.egg-info
+copying pdf2textbox/data/01a_only_text.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/02a_two_cols.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/03a_three_cols.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/04a_text_and_header.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/05a_two_cols_and_header.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/06a_three_cols_and_header.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/Chapter 1.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/Chapter 2.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/DeHouwer2013WILOT.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/effective_learning_eng.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/data/learning_to_be.pdf -> pdf2textbox-0.2.4/pdf2textbox/data
+copying pdf2textbox/docs/Makefile -> pdf2textbox-0.2.4/pdf2textbox/docs
+copying pdf2textbox/docs/conf.py -> pdf2textbox-0.2.4/pdf2textbox/docs
+copying pdf2textbox/docs/index.rst -> pdf2textbox-0.2.4/pdf2textbox/docs
+copying pdf2textbox/docs/_build/doctrees/environment.pickle -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/doctrees
+copying pdf2textbox/docs/_build/doctrees/index.doctree -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/doctrees
+copying pdf2textbox/docs/_build/html/.buildinfo -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html
+copying pdf2textbox/docs/_build/html/.nojekyll -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html
+copying pdf2textbox/docs/_build/html/genindex.html -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html
+copying pdf2textbox/docs/_build/html/index.html -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html
+copying pdf2textbox/docs/_build/html/objects.inv -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html
+copying pdf2textbox/docs/_build/html/search.html -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html
+copying pdf2textbox/docs/_build/html/searchindex.js -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html
+copying pdf2textbox/docs/_build/html/_sources/index.rst.txt -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_sources
+copying pdf2textbox/docs/_build/html/_static/ajax-loader.gif -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/alabaster.css -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/basic.css -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/comment-bright.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/comment-close.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/comment.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/custom.css -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/doctools.js -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/down-pressed.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/down.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/file.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/jquery.js -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/minus.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/plus.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/pygments.css -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/searchtools.js -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/underscore.js -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/up-pressed.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/up.png -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying pdf2textbox/docs/_build/html/_static/websupport.js -> pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static
+copying tests/__init__.py -> pdf2textbox-0.2.4/tests
+copying tests/tags -> pdf2textbox-0.2.4/tests
+copying tests/test_cli_slice_option.py -> pdf2textbox-0.2.4/tests
+copying tests/test_convert_pdf.py -> pdf2textbox-0.2.4/tests
+copying tests/test_get_pdf.py -> pdf2textbox-0.2.4/tests
+copying tests/test_types.py -> pdf2textbox-0.2.4/tests
+Writing pdf2textbox-0.2.4/setup.cfg
+creating '.tox/dist/pdf2textbox-0.2.4.zip' and adding 'pdf2textbox-0.2.4' to it
+adding 'pdf2textbox-0.2.4/PKG-INFO'
+adding 'pdf2textbox-0.2.4/setup.py'
+adding 'pdf2textbox-0.2.4/LICENSE'
+adding 'pdf2textbox-0.2.4/setup.cfg'
+adding 'pdf2textbox-0.2.4/MANIFEST.in'
+adding 'pdf2textbox-0.2.4/README.rst'
+adding 'pdf2textbox-0.2.4/tox.ini'
+adding 'pdf2textbox-0.2.4/pdf2textbox.egg-info/PKG-INFO'
+adding 'pdf2textbox-0.2.4/pdf2textbox.egg-info/top_level.txt'
+adding 'pdf2textbox-0.2.4/pdf2textbox.egg-info/dependency_links.txt'
+adding 'pdf2textbox-0.2.4/pdf2textbox.egg-info/SOURCES.txt'
+adding 'pdf2textbox-0.2.4/tests/test_get_pdf.py'
+adding 'pdf2textbox-0.2.4/tests/test_cli_slice_option.py'
+adding 'pdf2textbox-0.2.4/tests/test_convert_pdf.py'
+adding 'pdf2textbox-0.2.4/tests/__init__.py'
+adding 'pdf2textbox-0.2.4/tests/tags'
+adding 'pdf2textbox-0.2.4/tests/test_types.py'
+adding 'pdf2textbox-0.2.4/pdf2textbox/LICENSE.txt'
+adding 'pdf2textbox-0.2.4/pdf2textbox/pdf2textbox.py'
+adding 'pdf2textbox-0.2.4/pdf2textbox/__init__.py'
+adding 'pdf2textbox-0.2.4/pdf2textbox/tags'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/Makefile'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/conf.py'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/index.rst'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/doctrees/index.doctree'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/doctrees/environment.pickle'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/searchindex.js'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/objects.inv'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/search.html'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/genindex.html'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/.nojekyll'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/.buildinfo'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/index.html'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/down-pressed.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/down.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/up.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/alabaster.css'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/plus.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/pygments.css'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/doctools.js'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/up-pressed.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/websupport.js'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/basic.css'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/underscore.js'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/comment-close.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/minus.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/custom.css'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/file.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/jquery.js'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/comment-bright.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/comment.png'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/searchtools.js'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_static/ajax-loader.gif'
+adding 'pdf2textbox-0.2.4/pdf2textbox/docs/_build/html/_sources/index.rst.txt'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/effective_learning_eng.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/06a_three_cols_and_header.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/Id=MMP16%2F139_14622_14624.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/03a_three_cols.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/05a_two_cols_and_header.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/Chapter 2.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/02a_two_cols.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/DeHouwer2013WILOT.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/Id=MMP15%2F57_5694_5696.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/learning_to_be.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/04a_text_and_header.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/Chapter 1.pdf'
+adding 'pdf2textbox-0.2.4/pdf2textbox/data/01a_only_text.pdf'
+removing 'pdf2textbox-0.2.4' (and everything under it)

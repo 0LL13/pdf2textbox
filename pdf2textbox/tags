@@ -1,0 +1,301 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+"	docs/_build/html/_static/underscore.js	/^    '>': '&gt;',$/;"	p	class:escapeMap
+$.fn.autogrow.resize	docs/_build/html/_static/websupport.js	/^  };$/;"	f
+$.fn.comment	docs/_build/html/_static/websupport.js	/^  }$/;"	f
+&	docs/_build/html/_static/underscore.js	/^  var escapeMap = {$/;"	p	class:escapeMap
+'	docs/_build/html/_static/underscore.js	/^    '"': '&quot;',$/;"	p	class:escapeMap
+'	docs/_build/html/_static/underscore.js	/^  var escapes = {$/;"	p	class:escapes
+<	docs/_build/html/_static/underscore.js	/^    '&': '&amp;',$/;"	p	class:escapeMap
+>	docs/_build/html/_static/underscore.js	/^    '<': '&lt;',$/;"	p	class:escapeMap
+ArrayProto	docs/_build/html/_static/underscore.js	/^  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;$/;"	v
+BUILDDIR	docs/Makefile	/^BUILDDIR      = _build$/;"	m
+Ctor	docs/_build/html/_static/underscore.js	/^    var result = new Ctor;$/;"	c
+Ctor	docs/_build/html/_static/underscore.js	/^  var Ctor = function(){};$/;"	f
+MAX_ARRAY_INDEX	docs/_build/html/_static/underscore.js	/^  var MAX_ARRAY_INDEX = Math.pow(2, 53) - 1;$/;"	v
+PLURAL_EXPR	docs/_build/html/_static/doctools.js	/^    this.PLURAL_EXPR = new Function('n', 'return +(' + catalog.plural_expr + ')');$/;"	f
+SOURCEDIR	docs/Makefile	/^SOURCEDIR     = .$/;"	m
+SPHINXBUILD	docs/Makefile	/^SPHINXBUILD   = sphinx-build$/;"	m
+SPHINXOPTS	docs/Makefile	/^SPHINXOPTS    =$/;"	m
+SPHINXPROJ	docs/Makefile	/^SPHINXPROJ    = pdf2textbox$/;"	m
+Stemmer	docs/_build/html/_static/searchtools.js	/^var Stemmer = function() {$/;"	c
+TRANSLATIONS	docs/_build/html/_static/doctools.js	/^  },$/;"	p	class:Documentation
+\	docs/_build/html/_static/underscore.js	/^    "'":      "'",$/;"	p	class:escapes
+_	docs/_build/html/_static/underscore.js	/^  var _ = function(obj) {$/;"	c
+_	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.after	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.allKeys	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.before	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.bind	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.bindAll	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.chain	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.clone	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.compact	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.compose	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.constant	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.create	docs/_build/html/_static/underscore.js	/^  _.defaults = createAssigner(_.allKeys, true);$/;"	f
+_.debounce	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.delay	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.difference	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.findKey	docs/_build/html/_static/underscore.js	/^  _.extendOwn = _.assign = createAssigner(_.keys);$/;"	f
+_.findWhere	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.flatten	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.has	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.identity	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.initial	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.intersection	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.invert	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.invoke	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isArguments	docs/_build/html/_static/underscore.js	/^  if (!_.isArguments(arguments)) {$/;"	f
+_.isBoolean	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isElement	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isEmpty	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isEqual	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isFinite	docs/_build/html/_static/underscore.js	/^  }$/;"	f
+_.isFunction	docs/_build/html/_static/underscore.js	/^  if (typeof \/.\/ != 'function' && typeof Int8Array != 'object') {$/;"	f
+_.isMatch	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isNaN	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isNull	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isObject	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.isUndefined	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.iteratee	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.keys	docs/_build/html/_static/underscore.js	/^  }$/;"	f
+_.last	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.mapObject	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.max	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.memoize	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.min	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.mixin	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.negate	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.noConflict	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.noop	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.omit	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.pairs	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.partial	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.partition	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.pick	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.pluck	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.propertyOf	docs/_build/html/_static/underscore.js	/^  _.property = property;$/;"	f
+_.random	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.range	docs/_build/html/_static/underscore.js	/^  _.lastIndexOf = createIndexFinder(-1, _.findLastIndex);$/;"	f
+_.reject	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.result	docs/_build/html/_static/underscore.js	/^  _.unescape = createEscaper(unescapeMap);$/;"	f
+_.sample	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.shuffle	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.size	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.sortBy	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.sortedIndex	docs/_build/html/_static/underscore.js	/^  _.findLastIndex = createPredicateIndexFinder(-1);$/;"	f
+_.tap	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.throttle	docs/_build/html/_static/underscore.js	/^  _.defer = _.partial(_.delay, _, 1);$/;"	f
+_.times	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.toArray	docs/_build/html/_static/underscore.js	/^  });$/;"	f
+_.union	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.uniqueId	docs/_build/html/_static/underscore.js	/^  var idCounter = 0;$/;"	f
+_.unzip	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.values	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.where	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.without	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.wrap	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_.zip	docs/_build/html/_static/underscore.js	/^  };$/;"	f
+_all_boxes_aligned	pdf2textbox.py	/^def _all_boxes_aligned(box_parameters, NR_OF_COLS):$/;"	f
+_ask_for_page_to_end_at	pdf2textbox.py	/^def _ask_for_page_to_end_at():$/;"	f
+_ask_for_page_to_start_from	pdf2textbox.py	/^def _ask_for_page_to_start_from():$/;"	f
+_check_page_delimiter	pdf2textbox.py	/^def _check_page_delimiter(loc):$/;"	f
+_choose_col	pdf2textbox.py	/^def _choose_col(x0, x1, SIDE_PAGE_EDGE, BOX_WIDTH_MAX, verbose):$/;"	f
+_fill_boxes	pdf2textbox.py	/^def _fill_boxes(LTPage, boxes, page_nr, verbose):$/;"	f
+_find_start_and_end_page	pdf2textbox.py	/^def _find_start_and_end_page(LTPage, page_from, page_to, token_start, token_end):$/;"	f
+_get_X0_MIN	pdf2textbox.py	/^def _get_X0_MIN(x0, X0_MIN):$/;"	f
+_get_X1_MAX	pdf2textbox.py	/^def _get_X1_MAX(x1, X1_MAX):$/;"	f
+_get_Y0_MAX	pdf2textbox.py	/^def _get_Y0_MAX(y0, Y0_MAX):$/;"	f
+_get_Y0_MIN	pdf2textbox.py	/^def _get_Y0_MIN(y0, Y0_MIN):$/;"	f
+_get_Y1_MAX	pdf2textbox.py	/^def _get_Y1_MAX(y1, Y1_MAX):$/;"	f
+_get_box_borders	pdf2textbox.py	/^def _get_box_borders(LTLine):$/;"	f
+_get_box_width	pdf2textbox.py	/^def _get_box_width(box_parameters, Y_HEADER):$/;"	f
+_get_local_file	pdf2textbox.py	/^def _get_local_file():$/;"	f
+_get_page_layout	pdf2textbox.py	/^def _get_page_layout(LTPage, VERTICAL, HORIZONTAL):$/;"	f
+_get_page_parameters	pdf2textbox.py	/^def _get_page_parameters(LTPage, verbose):$/;"	f
+_get_pages	pdf2textbox.py	/^def _get_pages(loc, verbose):$/;"	f
+_get_pdf_file	pdf2textbox.py	/^def _get_pdf_file(pdf_loc, verbose):$/;"	f
+_get_url	pdf2textbox.py	/^def _get_url(url=None):$/;"	f
+_get_y_header	pdf2textbox.py	/^def _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose):$/;"	f
+_index	docs/_build/html/_static/searchtools.js	/^var Search = {$/;"	p	class:Search
+_init_boxes	pdf2textbox.py	/^def _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes):$/;"	f
+_only_one_box	pdf2textbox.py	/^def _only_one_box(box_parameters, NR_OF_COLS):$/;"	f
+_pdf_to_text_all	pdf2textbox.py	/^def _pdf_to_text_all(pdf, verbose):$/;"	f
+_pdf_to_text_slice	pdf2textbox.py	/^def _pdf_to_text_slice(pdf, page_from, page_to, verbose):$/;"	f
+_print_boxes_all	pdf2textbox.py	/^def _print_boxes_all(boxes, verbose):$/;"	f
+_print_boxes_sliced	pdf2textbox.py	/^def _print_boxes_sliced(boxes, page_from, page_to, verbose):$/;"	f
+_print_document_info	pdf2textbox.py	/^def _print_document_info(document):$/;"	f
+_print_page_parameters	pdf2textbox.py	/^        Y_HEADER, NR_OF_COLS):$/;"	f
+_pulse_status	docs/_build/html/_static/searchtools.js	/^  _queued_query : null,$/;"	p	class:Search
+_queued_query	docs/_build/html/_static/searchtools.js	/^  _index : null,$/;"	p	class:Search
+`	docs/_build/html/_static/underscore.js	/^    "'": '&#x27;',$/;"	p	class:escapeMap
+acceptComment	docs/_build/html/_static/websupport.js	/^  function acceptComment(id) {$/;"	f
+acceptCommentURL	docs/_build/html/_static/websupport.js	/^    getCommentsURL: '\/_get_comments',$/;"	p	class:opts
+addComment	docs/_build/html/_static/websupport.js	/^  function addComment(form) {$/;"	f
+addCommentURL	docs/_build/html/_static/websupport.js	/^    processVoteURL: '\/_process_vote',$/;"	p	class:opts
+alism	docs/_build/html/_static/searchtools.js	/^    ator: 'ate',$/;"	p	class:Stemmer.step2list
+aliti	docs/_build/html/_static/searchtools.js	/^    ousness: 'ous',$/;"	p	class:Stemmer.step2list
+alize	docs/_build/html/_static/searchtools.js	/^    ative: '',$/;"	p	class:Stemmer.step3list
+alli	docs/_build/html/_static/searchtools.js	/^    bli: 'ble',$/;"	p	class:Stemmer.step2list
+anci	docs/_build/html/_static/searchtools.js	/^    enci: 'ence',$/;"	p	class:Stemmer.step2list
+appendComments	docs/_build/html/_static/websupport.js	/^  function appendComments(comments, ul) {$/;"	f
+areArrays	docs/_build/html/_static/underscore.js	/^    var areArrays = className === '[object Array]';$/;"	v
+ation	docs/_build/html/_static/searchtools.js	/^    ization: 'ize',$/;"	p	class:Stemmer.step2list
+ational	docs/_build/html/_static/searchtools.js	/^  var step2list = {$/;"	p	class:Stemmer.step2list
+ative	docs/_build/html/_static/searchtools.js	/^    icate: 'ic',$/;"	p	class:Stemmer.step3list
+ator	docs/_build/html/_static/searchtools.js	/^    ation: 'ate',$/;"	p	class:Stemmer.step2list
+author	docs/conf.py	/^author = u'Oliver Stapel'$/;"	v
+baseCreate	docs/_build/html/_static/underscore.js	/^  var baseCreate = function(prototype) {$/;"	f
+biliti	docs/_build/html/_static/searchtools.js	/^    iviti: 'ive',$/;"	p	class:Stemmer.step2list
+bli	docs/_build/html/_static/searchtools.js	/^    izer: 'ize',$/;"	p	class:Stemmer.step2list
+bound	docs/_build/html/_static/underscore.js	/^    var bound = function() {$/;"	f	function:_.bind
+bound	docs/_build/html/_static/underscore.js	/^    var bound = function() {$/;"	f	function:_.partial
+cb	docs/_build/html/_static/underscore.js	/^  var cb = function(value, context, argCount) {$/;"	f
+closeCommentImage	docs/_build/html/_static/websupport.js	/^    commentImage: '\/static\/_static\/comment.png',$/;"	p	class:opts
+closeReply	docs/_build/html/_static/websupport.js	/^  function closeReply(id) {$/;"	f
+collectNonEnumProps	docs/_build/html/_static/underscore.js	/^  function collectNonEnumProps(obj, keys) {$/;"	f
+commentBrightImage	docs/_build/html/_static/websupport.js	/^    loadingImage: '\/static\/_static\/ajax-loader.gif',$/;"	p	class:opts
+commentImage	docs/_build/html/_static/websupport.js	/^    deleteCommentURL: '\/_delete_comment',$/;"	p	class:opts
+commentTemplate	docs/_build/html/_static/websupport.js	/^  var commentTemplate = '\\$/;"	v
+comment_id	docs/_build/html/_static/websupport.js	/^    var d = {$/;"	p	class:handleVote.d
+comp	docs/_build/html/_static/websupport.js	/^      var i = by.substring(3);$/;"	f
+copyright	docs/conf.py	/^copyright = u'2018, Oliver Stapel'$/;"	v
+createAssigner	docs/_build/html/_static/underscore.js	/^  var createAssigner = function(keysFunc, undefinedOnly) {$/;"	f
+createCommentDiv	docs/_build/html/_static/websupport.js	/^  function createCommentDiv(comment) {$/;"	f
+createEscaper	docs/_build/html/_static/underscore.js	/^  var createEscaper = function(map) {$/;"	f
+createIndexFinder	docs/_build/html/_static/underscore.js	/^  function createIndexFinder(dir, predicateFind, sortedIndex) {$/;"	f
+createPredicateIndexFinder	docs/_build/html/_static/underscore.js	/^  function createPredicateIndexFinder(dir) {$/;"	f
+createReduce	docs/_build/html/_static/underscore.js	/^  function createReduce(dir) {$/;"	f
+deleteComment	docs/_build/html/_static/websupport.js	/^  function deleteComment(id) {$/;"	f
+deleteCommentURL	docs/_build/html/_static/websupport.js	/^    acceptCommentURL: '\/_accept_comment',$/;"	p	class:opts
+displayNextItem	docs/_build/html/_static/searchtools.js	/^    function displayNextItem() {$/;"	f
+downArrow	docs/_build/html/_static/websupport.js	/^    upArrow: '\/static\/_static\/up.png',$/;"	p	class:opts
+downArrowPressed	docs/_build/html/_static/websupport.js	/^    upArrowPressed: '\/static\/_static\/up-pressed.png',$/;"	p	class:opts
+eli	docs/_build/html/_static/searchtools.js	/^    entli: 'ent',$/;"	p	class:Stemmer.step2list
+enci	docs/_build/html/_static/searchtools.js	/^    tional: 'tion',$/;"	p	class:Stemmer.step2list
+entli	docs/_build/html/_static/searchtools.js	/^    alli: 'al',$/;"	p	class:Stemmer.step2list
+eq	docs/_build/html/_static/underscore.js	/^  var eq = function(a, b, aStack, bStack) {$/;"	f
+escaper	docs/_build/html/_static/underscore.js	/^    var escaper = function(match) {$/;"	f	function:createEscaper
+evaluate	docs/_build/html/_static/underscore.js	/^  _.templateSettings = {$/;"	p	class:_.templateSettings
+exclude_patterns	docs/conf.py	/^exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']$/;"	v
+excluded	docs/_build/html/_static/searchtools.js	/^    var excluded = [];$/;"	v
+executeBound	docs/_build/html/_static/underscore.js	/^  var executeBound = function(sourceFunc, boundFunc, context, callingContext, args) {$/;"	f
+extensions	docs/conf.py	/^extensions = ['sphinx.ext.autodoc',$/;"	v
+fileMap	docs/_build/html/_static/searchtools.js	/^    var fileMap = {};$/;"	v
+flatten	docs/_build/html/_static/underscore.js	/^  var flatten = function(input, shallow, strict, startIndex) {$/;"	f
+fn.autogrow	docs/_build/html/_static/websupport.js	/^\/*$/;"	f
+ful	docs/_build/html/_static/searchtools.js	/^    ical: 'ic',$/;"	p	class:Stemmer.step3list
+fulness	docs/_build/html/_static/searchtools.js	/^    iveness: 'ive',$/;"	p	class:Stemmer.step2list
+getChildren	docs/_build/html/_static/websupport.js	/^  function getChildren(ul, recursive) {$/;"	f
+getComments	docs/_build/html/_static/websupport.js	/^  function getComments(id) {$/;"	f
+getCommentsURL	docs/_build/html/_static/websupport.js	/^    addCommentURL: '\/_add_comment',$/;"	p	class:opts
+group	docs/_build/html/_static/underscore.js	/^  var group = function(behavior) {$/;"	f
+handle	docs/_build/html/_static/websupport.js	/^    function handle(ph, escape) {$/;"	f	function:renderTemplate
+handleReSort	docs/_build/html/_static/websupport.js	/^  function handleReSort(link) {$/;"	f
+handleVote	docs/_build/html/_static/websupport.js	/^  function handleVote(link) {$/;"	f
+hide	docs/_build/html/_static/websupport.js	/^  function hide(id) {$/;"	f
+hideProposal	docs/_build/html/_static/websupport.js	/^  function hideProposal(id) {$/;"	f
+hideProposeChange	docs/_build/html/_static/websupport.js	/^  function hideProposeChange(id) {$/;"	f
+highlight	docs/_build/html/_static/doctools.js	/^  function highlight(node) {$/;"	f	function:jQuery.fn.highlightText
+highlightstring	docs/_build/html/_static/searchtools.js	/^    var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));$/;"	v
+hlterms	docs/_build/html/_static/searchtools.js	/^    var hlterms = [];$/;"	v
+html_static_path	docs/conf.py	/^html_static_path = ['_static']$/;"	v
+html_theme	docs/conf.py	/^html_theme = 'alabaster'$/;"	v
+htmlhelp_basename	docs/conf.py	/^htmlhelp_basename = 'pdf2textboxdoc'$/;"	v
+i	docs/_build/html/_static/searchtools.js	/^    var i, j, file;$/;"	v
+i	docs/_build/html/_static/searchtools.js	/^    var i;$/;"	v
+ical	docs/_build/html/_static/searchtools.js	/^    iciti: 'ic',$/;"	p	class:Stemmer.step3list
+icate	docs/_build/html/_static/searchtools.js	/^  var step3list = {$/;"	p	class:Stemmer.step3list
+iciti	docs/_build/html/_static/searchtools.js	/^    alize: 'al',$/;"	p	class:Stemmer.step3list
+idCounter	docs/_build/html/_static/underscore.js	/^  var idCounter = 0;$/;"	v
+init	docs/_build/html/_static/doctools.js	/^var Documentation = {$/;"	m	class:Documentation
+init	docs/_build/html/_static/websupport.js	/^  function init() {$/;"	f
+initComparator	docs/_build/html/_static/websupport.js	/^  function initComparator() {$/;"	f
+initEvents	docs/_build/html/_static/websupport.js	/^  function initEvents() {$/;"	f
+insertComment	docs/_build/html/_static/websupport.js	/^  function insertComment(comment) {$/;"	f
+isArrayLike	docs/_build/html/_static/underscore.js	/^  var isArrayLike = function(collection) {$/;"	f
+iteratee	docs/_build/html/_static/underscore.js	/^      keys = flatten(arguments, false, false, 1);$/;"	f
+iterator	docs/_build/html/_static/underscore.js	/^    function iterator(obj, iteratee, memo, keys, index, length) {$/;"	f	function:createReduce
+iveness	docs/_build/html/_static/searchtools.js	/^    alism: 'al',$/;"	p	class:Stemmer.step2list
+iviti	docs/_build/html/_static/searchtools.js	/^    aliti: 'al',$/;"	p	class:Stemmer.step2list
+ization	docs/_build/html/_static/searchtools.js	/^    ousli: 'ous',$/;"	p	class:Stemmer.step2list
+izer	docs/_build/html/_static/searchtools.js	/^    anci: 'ance',$/;"	p	class:Stemmer.step2list
+jQuery.fn.highlightText	docs/_build/html/_static/doctools.js	/^};$/;"	f
+jQuery.getQueryParameters	docs/_build/html/_static/doctools.js	/^jQuery.urlencode = encodeURIComponent;$/;"	f
+jQuery.uaMatch	docs/_build/html/_static/doctools.js	/^if (!jQuery.browser) {$/;"	f
+jQuery.urldecode	docs/_build/html/_static/doctools.js	/^$u = _.noConflict();$/;"	f
+language	docs/conf.py	/^language = None$/;"	v
+later	docs/_build/html/_static/underscore.js	/^    var later = function() {$/;"	f
+later	docs/_build/html/_static/underscore.js	/^    var later = function() {$/;"	f	function:_.debounce
+latex_documents	docs/conf.py	/^latex_documents = [$/;"	v
+latex_elements	docs/conf.py	/^latex_elements = {$/;"	v
+length	docs/_build/html/_static/underscore.js	/^    var length = aStack.length;$/;"	v
+loadingImage	docs/_build/html/_static/websupport.js	/^    closeCommentImage: '\/static\/_static\/comment-close.png',$/;"	p	class:opts
+logi	docs/_build/html/_static/searchtools.js	/^    biliti: 'ble',$/;"	p	class:Stemmer.step2list
+man_pages	docs/conf.py	/^man_pages = [$/;"	v
+master_doc	docs/conf.py	/^master_doc = 'index'$/;"	v
+memoize	docs/_build/html/_static/underscore.js	/^    var memoize = function(key) {$/;"	f	function:_.memoize
+moderator	docs/_build/html/_static/websupport.js	/^    voting: false,$/;"	p	class:opts
+n	docs/_build/html/_static/underscore.js	/^    '\\r':     'r',$/;"	p	class:escapes
+nativeIsArray	docs/_build/html/_static/underscore.js	/^  var$/;"	v
+ness	docs/_build/html/_static/searchtools.js	/^    ful: '',$/;"	p	class:Stemmer.step3list
+noMatch	docs/_build/html/_static/underscore.js	/^  var noMatch = \/(.)^\/;$/;"	v
+nonEnumerableProps	docs/_build/html/_static/underscore.js	/^  var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',$/;"	v
+objNameMatch	docs/_build/html/_static/searchtools.js	/^var Scorer = {$/;"	p	class:Scorer
+objPartialMatch	docs/_build/html/_static/searchtools.js	/^  objNameMatch: 11,$/;"	p	class:Scorer
+objPrio	docs/_build/html/_static/searchtools.js	/^  objPartialMatch: 6,$/;"	p	class:Scorer
+objectterms	docs/_build/html/_static/searchtools.js	/^    var objectterms = [];$/;"	v
+openReply	docs/_build/html/_static/websupport.js	/^  function openReply(id) {$/;"	f
+optimizeCb	docs/_build/html/_static/underscore.js	/^  var optimizeCb = function(func, context, argCount) {$/;"	f
+ousli	docs/_build/html/_static/searchtools.js	/^    eli: 'e',$/;"	p	class:Stemmer.step2list
+ousness	docs/_build/html/_static/searchtools.js	/^    fulness: 'ful',$/;"	p	class:Stemmer.step2list
+pdf2textbox	pdf2textbox.py	/^def pdf2textbox():$/;"	f
+popupTemplate	docs/_build/html/_static/websupport.js	/^  var popupTemplate = '\\$/;"	v
+previousUnderscore	docs/_build/html/_static/underscore.js	/^  var previousUnderscore = root._;$/;"	v
+processVoteURL	docs/_build/html/_static/websupport.js	/^  var opts = {$/;"	p	class:opts
+project	docs/conf.py	/^project = u'pdf2textbox'$/;"	v
+property	docs/_build/html/_static/underscore.js	/^  var property = function(key) {$/;"	f
+pulse	docs/_build/html/_static/searchtools.js	/^    function pulse() {$/;"	f
+push	docs/_build/html/_static/underscore.js	/^  var$/;"	v
+pygments_style	docs/conf.py	/^pygments_style = 'sphinx'$/;"	v
+r	docs/_build/html/_static/underscore.js	/^    '\\\\':     '\\\\',$/;"	p	class:escapes
+release	docs/conf.py	/^release = u'0.1.1'$/;"	v
+renderTemplate	docs/_build/html/_static/websupport.js	/^  function renderTemplate(template, context) {$/;"	f
+replyTemplate	docs/_build/html/_static/websupport.js	/^  var replyTemplate = '\\$/;"	v
+result	docs/_build/html/_static/underscore.js	/^  var result = function(instance, obj) {$/;"	f
+resultCount	docs/_build/html/_static/searchtools.js	/^    var resultCount = results.length;$/;"	v
+results	docs/_build/html/_static/searchtools.js	/^    var results = [];$/;"	v
+rv	docs/_build/html/_static/searchtools.js	/^    var rv = $('<div class="context"><\/div>').text(excerpt);$/;"	v
+scoreMap	docs/_build/html/_static/searchtools.js	/^    var scoreMap = {};$/;"	v
+searchterms	docs/_build/html/_static/searchtools.js	/^    var searchterms = [];$/;"	v
+setComparator	docs/_build/html/_static/websupport.js	/^  function setComparator() {$/;"	f
+show	docs/_build/html/_static/websupport.js	/^  function show(id) {$/;"	f
+showError	docs/_build/html/_static/websupport.js	/^  function showError(message) {$/;"	f
+showProposal	docs/_build/html/_static/websupport.js	/^  function showProposal(id) {$/;"	f
+showProposeChange	docs/_build/html/_static/websupport.js	/^  function showProposeChange(id) {$/;"	f
+sortComments	docs/_build/html/_static/websupport.js	/^  function sortComments(comments) {$/;"	f
+source_suffix	docs/conf.py	/^source_suffix = '.rst'$/;"	v
+splitQuery	docs/_build/html/_static/searchtools.js	/^function splitQuery(query) {$/;"	f
+start	docs/_build/html/_static/searchtools.js	/^    var start = 0;$/;"	v
+stemWord	docs/_build/html/_static/searchtools.js	/^  this.stemWord = function (w) {$/;"	m	class:Stemmer
+stopwords	docs/_build/html/_static/searchtools.js	/^    var stopwords = ["a","and","are","as","at","be","but","by","for","if","in","into","is","it","near","no","not","of","on","or","such","that","the","their","then","there","these","they","this","to","was","will","with"];$/;"	v
+template	docs/_build/html/_static/underscore.js	/^    var template = function(data) {$/;"	f	function:var
+templates_path	docs/conf.py	/^templates_path = ['_templates']$/;"	v
+texinfo_documents	docs/conf.py	/^texinfo_documents = [$/;"	v
+tional	docs/_build/html/_static/searchtools.js	/^    ational: 'ate',$/;"	p	class:Stemmer.step2list
+toString	docs/_build/html/_static/underscore.js	/^  _.prototype.toString = function() {$/;"	m	class:_
+todo_include_todos	docs/conf.py	/^todo_include_todos = True$/;"	v
+toggleCommentMarkupBox	docs/_build/html/_static/websupport.js	/^  function toggleCommentMarkupBox(id) {$/;"	f
+u2028	docs/_build/html/_static/underscore.js	/^    '\\n':     'n',$/;"	p	class:escapes
+u2029	docs/_build/html/_static/underscore.js	/^    '\\u2028': 'u2028',$/;"	p	class:escapes
+upArrow	docs/_build/html/_static/websupport.js	/^    commentBrightImage: '\/static\/_static\/comment-bright.png',$/;"	p	class:opts
+upArrowPressed	docs/_build/html/_static/websupport.js	/^    downArrow: '\/static\/_static\/down.png',$/;"	p	class:opts
+value	docs/_build/html/_static/underscore.js	/^  _.prototype.value = function() {$/;"	m	class:_
+valueOf	docs/_build/html/_static/underscore.js	/^  _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;$/;"	m	class:_
+version	docs/conf.py	/^version = u'0.1'$/;"	v
+voting	docs/_build/html/_static/websupport.js	/^    downArrowPressed: '\/static\/_static\/down-pressed.png',$/;"	p	class:opts
