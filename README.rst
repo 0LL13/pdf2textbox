@@ -2,9 +2,8 @@
 .. image:: https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
     :target: https://travis-ci.org/0LL13/pdf2textbox
 
-.. image:: https://img.shields.io/pypi/v/nine.svg   :alt: PyPI
-
-.. image:: https://img.shields.io/pypi/l/Django.svg   :alt: PyPI - License
+.. image:: https://badge.fury.io/py/pdf2textbox.svg
+    :target: https://badge.fury.io/py/pdf2textbox
 
 
 ============
