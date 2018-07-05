@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: https://img.shields.io/travis/USER/REPO.svg   :alt: Travis
+.. image:: https://img.shields.io/travis/0LL13/pdf2textbox.svg   :alt: Travis
 
 
 pdf2textbox's doc
