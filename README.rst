@@ -1,4 +1,5 @@
 
+https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
 [![Build Status](https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master)](https://travis-ci.org/0LL13/pdf2textbox)
 
 ============
