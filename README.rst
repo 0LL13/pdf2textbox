@@ -1,6 +1,6 @@
 
-https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
-[![Build Status](https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master)](https://travis-ci.org/0LL13/pdf2textbox)
+.. image:: https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
+    :target: https://travis-ci.org/0LL13/pdf2textbox
 
 ============
 pdf2textbox
