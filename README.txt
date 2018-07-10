@@ -5,7 +5,6 @@
 .. image:: https://badge.fury.io/py/pdf2textbox.svg
     :target: https://badge.fury.io/py/pdf2textbox
 
-
 .. image:: https://coveralls.io/repos/github/0LL13/pdf2textbox/badge.svg?branch=master
     :target: https://coveralls.io/github/0LL13/pdf2textbox?branch=master
 

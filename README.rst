@@ -5,7 +5,6 @@
 .. image:: https://badge.fury.io/py/pdf2textbox.svg
     :target: https://badge.fury.io/py/pdf2textbox
 
-
 .. image:: https://coveralls.io/repos/github/0LL13/pdf2textbox/badge.svg?branch=master
     :target: https://coveralls.io/github/0LL13/pdf2textbox?branch=master
 
@@ -42,8 +41,10 @@ Installation
 Contribute
 ----------
 
-- Issue Tracker: github.com/0LL13/pdf2textbox/issues
-- Source Code: github.com/0LL13/pdf2textbox/src/pdf2textbox
+- Issue Tracker: https://github.com/0LL13/pdf2textbox/issues
+- Source Code: https://github.com/0LL13/pdf2textbox/src/pdf2textbox
+- Say Thanks!: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg
+- Source: https://github.com/0LL13/pdf2textbox
 
 Support
 -------
@@ -52,6 +53,16 @@ Feel free to fork and improve.
 
 Warranty
 --------
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -64,4 +75,6 @@ IN THE SOFTWARE.
 License
 -------
 
-MIT
+MIT License
+
+Copyright (c) 2018 Oliver Stapel
