@@ -6,4 +6,6 @@ bin/
 lib/
 archive/
 ./tox
+.tox
 .coverage
+.egg*

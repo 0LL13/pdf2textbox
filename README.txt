@@ -1,3 +1,15 @@
+
+.. image:: https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
+    :target: https://travis-ci.org/0LL13/pdf2textbox
+
+.. image:: https://badge.fury.io/py/pdf2textbox.svg
+    :target: https://badge.fury.io/py/pdf2textbox
+
+
+.. image:: https://coveralls.io/repos/github/0LL13/pdf2textbox/badge.svg?branch=master
+    :target: https://coveralls.io/github/0LL13/pdf2textbox?branch=master
+
+
 ============
 pdf2textbox
 ============
@@ -24,7 +36,8 @@ if start and end page cannot be found - user input is requested.
 Installation
 ------------
 
-pip install pdf2textbox
+    pip install pdf2textbox
+
 
 Contribute
 ----------

@@ -8,11 +8,11 @@ certifi==2018.4.16
 chardet==3.0.4
 idna==2.7
 more-itertools==4.2.0
-pdf2textbox==0.2.3
+pdf2textbox==0.2.4
 pdfminer2==20151206
 pluggy==0.6.0
 py==1.5.4
-pytest==3.6.2
+pytest==3.6.3
 requests==2.19.1
 six==1.11.0
 urllib3==1.23

@@ -1,12 +1,29 @@
-#include CHANGELOG.rst
-include README.rst
-#include CONTRIBUTORS
-include LICENSE
-include setup.py
-include tox.ini
-graft pdf2textbox/
-graft pdf2textbox/data
-graft tests
+# Include the README
+include *.rst
 
-global-exclude __pycache__
-global-exclude *.py[cod]
+# Include the license file
+include LICENSE.txt
+
+# added by check_manifest.py
+include *.json
+include *.txt
+include LICENSE
+include MANIFEST
+include tox.ini
+recursive-include man *.1
+recursive-include pdf2textbox *.buildinfo
+recursive-include pdf2textbox *.css
+recursive-include pdf2textbox *.doctree
+recursive-include pdf2textbox *.gif
+recursive-include pdf2textbox *.html
+recursive-include pdf2textbox *.inv
+recursive-include pdf2textbox *.js
+recursive-include pdf2textbox *.nojekyll
+recursive-include pdf2textbox *.pdf
+recursive-include pdf2textbox *.pickle
+recursive-include pdf2textbox *.png
+recursive-include pdf2textbox *.py
+recursive-include pdf2textbox *.rst
+recursive-include pdf2textbox *.txt
+recursive-include pdf2textbox Makefile
+recursive-include tests *.py

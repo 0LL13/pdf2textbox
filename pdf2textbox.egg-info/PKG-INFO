@@ -1,17 +1,94 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: pdf2textbox
 Version: 0.2.4
 Summary: A PDF-to-text converter based on pdfminer2
-Home-page: UNKNOWN
+Home-page: https://github.com/0LL13/pdf2textbox
 Author: Oliver Stapel
 Author-email: hardy.ecc95@gmail.com
 License: MIT
-Description: The pdf2textbox converter aims at converting PDF with up to                        three columns and a header into text without loosing too                        much information.                        Allows command line parameter -s (--slice) to indicate that                        only part of the PDF document is of interest. Start and end                        page will then be either retreived from the document's name                        using '_' or '|' as delimiters or - if start and end page                        cannot be found - user input is requested.
-Keywords: PDF,pdfminer2,PDF conversion,text processing
+Project-URL: Bug Reports, https://github.com/0LL13/pdf2textbox/issues
+Project-URL: Say Thanks!, https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg
+Project-URL: Source, https://github.com/0LL13/pdf2textbox
+Description: 
+        .. image:: https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
+            :target: https://travis-ci.org/0LL13/pdf2textbox
+        
+        .. image:: https://badge.fury.io/py/pdf2textbox.svg
+            :target: https://badge.fury.io/py/pdf2textbox
+        
+        
+        .. image:: https://coveralls.io/repos/github/0LL13/pdf2textbox/badge.svg?branch=master
+            :target: https://coveralls.io/github/0LL13/pdf2textbox?branch=master
+        
+        
+        ============
+        pdf2textbox
+        ============
+        
+        A PDF-to-text converter based on pdfminer2 (which is based on 
+        pdfminer.six which is based on pdfminer).
+        Converts PDF files with up to 3 columns and a header (optional)
+        to text and avoids most caveats that multi-columned PDF files have 
+        in store for PDF conversion.
+        
+        
+        Features
+        --------
+        
+        Convert PDF to text in the original order. This works well for PDF-files
+        without tables, graphs, and other stuff.
+        
+        Allows command line parameter -s (--slice) to indicate that only part of 
+        the PDF document is of interest. Start and end page will then be either 
+        retreived from the document's name using '_' or '|' as delimiters or - 
+        if start and end page cannot be found - user input is requested.
+        
+        
+        Installation
+        ------------
+        
+            pip install pdf2textbox
+        
+        
+        Contribute
+        ----------
+        
+        - Issue Tracker: github.com/0LL13/pdf2textbox/issues
+        - Source Code: github.com/0LL13/pdf2textbox/src/pdf2textbox
+        
+        Support
+        -------
+        
+        Feel free to fork and improve.
+        
+        Warranty
+        --------
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+        THE COPYRIGHT HOLDERS OR ANYONE DISTRIBUTING THE SOFTWARE BE LIABLE FOR ANY
+        DAMAGES OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT OR OTHERWISE, ARISING
+        FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+        IN THE SOFTWARE.
+        
+        License
+        -------
+        
+        MIT
+        
+Keywords: PDF pdfminer2 PDFconversion text-processing
 Platform: UNKNOWN
-Classifier: License :: OSI Approved :: MIT License
-Classifier: Programming Language :: Python :: 3.6
-Classifier: Operating System :: POSIX :: Linux
 Classifier: Development Status :: 5 - Production/Stable
-Classifier: Topic :: Text Processing :: General
 Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Text Processing :: General
+Description-Content-Type: text/x-rst
+Provides-Extra: test
+Provides-Extra: dev
