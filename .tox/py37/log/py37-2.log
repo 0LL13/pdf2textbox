@@ -7,9 +7,9 @@ Requirement already satisfied: pdfminer2 in ./.tox/py37/lib/python3.7/site-packa
 Requirement already satisfied: requests in ./.tox/py37/lib/python3.7/site-packages (from pdf2textbox==0.2.4) (2.19.1)
 Requirement already satisfied: six in ./.tox/py37/lib/python3.7/site-packages (from pdfminer2->pdf2textbox==0.2.4) (1.11.0)
 Requirement already satisfied: urllib3<1.24,>=1.21.1 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (1.23)
-Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (2018.4.16)
 Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (3.0.4)
 Requirement already satisfied: idna<2.8,>=2.5 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (2.7)
+Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (2018.4.16)
 Building wheels for collected packages: pdf2textbox
   Running setup.py bdist_wheel for pdf2textbox: started
   Running setup.py bdist_wheel for pdf2textbox: finished with status 'done'

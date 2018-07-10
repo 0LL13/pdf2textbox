@@ -5,8 +5,6 @@ include *.rst
 include *.txt
 include LICENSE
 include tox.ini
-recursive-include dist *.gz
-recursive-include dist *.whl
 recursive-include man *.1
 recursive-include pdf2textbox *.buildinfo
 recursive-include pdf2textbox *.css

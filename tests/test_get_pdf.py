@@ -14,7 +14,7 @@ def test_get_url():
             '{}Id=MMP16%2F139|14617|14630'.format(base),
             '{}Id=MMP16%2F140|14760|14768'.format(base),
             '{}Id=MMP15%2F57|5694|5696'.format(base),
-            '{}Id=MMP16%2F8|368|369'.format(base)]
+            '{}Id=MMP16%2F11|542|544'.format(base)]
 
     regex = re.compile(
             r'^(?:http|ftp)s?://' # http:// or https://
@@ -49,7 +49,9 @@ def test_get_local_file():
 def test_get_pdf_file_url():
     '''using requests test if type pdf is io.BytesIO stream'''
 
-    url = 'https://www.landtag.nrw.de/portal/WWW/dokumentenarchiv/Dokumenent?Id=MMP16%2F8|368|369'
+    base = 'https://www.landtag.nrw.de/portal/WWW/dokumentenarchiv/Dokument?'
+    url = base + 'Id=MMP16%2F11|542|544'
+    print('url', url)
     pdf = _get_pdf_file(url, verbose=False)
 
     assert isinstance(pdf, io.BytesIO)

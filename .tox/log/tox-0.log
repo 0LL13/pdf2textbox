@@ -20,7 +20,6 @@ no previously-included directories found matching 'include'
 writing manifest file 'pdf2textbox.egg-info/SOURCES.txt'
 running check
 creating pdf2textbox-0.2.4
-creating pdf2textbox-0.2.4/dist
 creating pdf2textbox-0.2.4/man
 creating pdf2textbox-0.2.4/man/man1
 creating pdf2textbox-0.2.4/pdf2textbox
@@ -49,8 +48,6 @@ copying requirements.txt -> pdf2textbox-0.2.4
 copying setup.cfg -> pdf2textbox-0.2.4
 copying setup.py -> pdf2textbox-0.2.4
 copying tox.ini -> pdf2textbox-0.2.4
-copying dist/pdf2textbox-0.2.4-py3-none-any.whl -> pdf2textbox-0.2.4/dist
-copying dist/pdf2textbox-0.2.4.tar.gz -> pdf2textbox-0.2.4/dist
 copying man/man1/tqdm.1 -> pdf2textbox-0.2.4/man/man1
 copying pdf2textbox/__init__.py -> pdf2textbox-0.2.4/pdf2textbox
 copying pdf2textbox/pdf2textbox.py -> pdf2textbox-0.2.4/pdf2textbox
@@ -166,8 +163,6 @@ adding 'pdf2textbox-0.2.4/pdf2textbox.egg-info/dependency_links.txt'
 adding 'pdf2textbox-0.2.4/pdf2textbox.egg-info/SOURCES.txt'
 adding 'pdf2textbox-0.2.4/pdf2textbox.egg-info/requires.txt'
 adding 'pdf2textbox-0.2.4/man/man1/tqdm.1'
-adding 'pdf2textbox-0.2.4/dist/pdf2textbox-0.2.4.tar.gz'
-adding 'pdf2textbox-0.2.4/dist/pdf2textbox-0.2.4-py3-none-any.whl'
 adding 'pdf2textbox-0.2.4/tests/test_get_pdf.py'
 adding 'pdf2textbox-0.2.4/tests/test_cli_slice_option.py'
 adding 'pdf2textbox-0.2.4/tests/test_convert_pdf.py'

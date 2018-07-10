@@ -7,6 +7,7 @@ attrs==18.1.0
 certifi==2018.4.16
 chardet==3.0.4
 check-manifest==0.37
+coverage==4.5.1
 idna==2.7
 more-itertools==4.2.0
 pdf2textbox==0.2.4
@@ -14,6 +15,7 @@ pdfminer2==20151206
 pluggy==0.6.0
 py==1.5.4
 pytest==3.6.3
+pytest-cov==2.5.1
 requests==2.19.1
 six==1.11.0
 urllib3==1.23
