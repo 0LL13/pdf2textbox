@@ -89,6 +89,5 @@ Classifier: Programming Language :: Python :: 3.7
 Classifier: Programming Language :: Python :: Implementation :: CPython
 Classifier: Operating System :: POSIX :: Linux
 Classifier: Topic :: Text Processing :: General
-Description-Content-Type: text/x-rst
-Provides-Extra: dev
 Provides-Extra: test
+Provides-Extra: dev

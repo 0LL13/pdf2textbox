@@ -1,0 +1,36 @@
+# Include the README
+include *.rst
+
+# Include the license file
+include LICENSE.txt
+
+# added by check_manifest.py
+include *.json
+include *.txt
+include LICENSE
+include MANIFEST
+include *.rc
+include tox.ini
+
+recursiv-include .cache *
+recursiv-include .tox
+recursive-include dist *.gz
+recursive-include dist *.whl
+recursive-include man *.1
+recursive-include pdf2textbox *.buildinfo
+recursive-include pdf2textbox *.css
+recursive-include pdf2textbox *.doctree
+recursive-include pdf2textbox *.gif
+recursive-include pdf2textbox *.html
+recursive-include pdf2textbox *.inv
+recursive-include pdf2textbox *.js
+recursive-include pdf2textbox *.nojekyll
+recursive-include pdf2textbox *.pdf
+recursive-include pdf2textbox *.pickle
+recursive-include pdf2textbox *.png
+recursive-include pdf2textbox *.py
+recursive-include pdf2textbox *.rst
+recursive-include pdf2textbox *.txt
+recursive-include tests *.py
+recursive-include pdf2textbox Makefile
+

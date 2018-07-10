@@ -1,15 +1,12 @@
-# Include the README
-include *.rst
-
-# Include the license file
-include LICENSE.txt
-
-# added by check_manifest.py
+include *.in
 include *.json
+include *.rc
+include *.rst
 include *.txt
 include LICENSE
-include MANIFEST
 include tox.ini
+recursive-include dist *.gz
+recursive-include dist *.whl
 recursive-include man *.1
 recursive-include pdf2textbox *.buildinfo
 recursive-include pdf2textbox *.css
@@ -27,3 +24,10 @@ recursive-include pdf2textbox *.rst
 recursive-include pdf2textbox *.txt
 recursive-include pdf2textbox Makefile
 recursive-include tests *.py
+
+exclude pdf2textbox/tags
+exclude tests/tags
+
+prune .tox
+prune .cache
+prune include

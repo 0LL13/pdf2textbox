@@ -5,22 +5,24 @@ from __future__ import absolute_import
 from __future__ import print_function
 
 import io
+import pathlib
 import re
+
 from glob import glob
 from os.path import basename
 from os.path import dirname
 from os.path import join
 from os.path import splitext
-from os import path
 from io import open
 
 from setuptools import find_packages
 from setuptools import setup
 
 
-here = path.abspath(path.dirname(__file__))
+script_dir = pathlib.Path(__file__).parent.resolve()
+print(script_dir)
 
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(str(script_dir)+'/README.rst', encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -28,7 +30,6 @@ setup(
     version = '0.2.4',
     description = 'A PDF-to-text converter based on pdfminer2',
     long_description = long_description,
-    long_description_content_type='text/x-rst',
     author = 'Oliver Stapel',
     author_email = 'hardy.ecc95@gmail.com',
     url='https://github.com/0LL13/pdf2textbox',

@@ -1,3 +1,4 @@
+.gitchangelog.rc
 CHANGELOG.rst
 LICENSE
 LICENSE.txt
@@ -9,6 +10,8 @@ requirements.txt
 setup.cfg
 setup.py
 tox.ini
+dist/pdf2textbox-0.2.4-py3-none-any.whl
+dist/pdf2textbox-0.2.4.tar.gz
 man/man1/tqdm.1
 pdf2textbox/__init__.py
 pdf2textbox/pdf2textbox.py
