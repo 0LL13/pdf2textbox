@@ -1,3 +1,0 @@
-[console_scripts]
-pdf2textbox = pdf2textbox:main
-

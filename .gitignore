@@ -13,4 +13,4 @@ archive/
 *.egg-info/
 *.egg-info
 pdf2textbox.egg-info/
-*PKG-INFO
+pdf2textbox.egg-info/PKG-INFO
