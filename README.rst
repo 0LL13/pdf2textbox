@@ -5,11 +5,8 @@
 .. image:: https://badge.fury.io/py/pdf2textbox.svg
     :target: https://badge.fury.io/py/pdf2textbox
 
-.. image:: https://coveralls.io/repos/github/0LL13/pdf2textbox/badge.svg?branch=master
-    :target: https://coveralls.io/github/0LL13/pdf2textbox?branch=master
-
-.. image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg 
-   :target: https://saythanks.io/to/0LL13
+.. image:: https://img.shields.io/pypi/pyversions/Django.svg   
+    :alt: PyPI - Python Version
 
 ============
 pdf2textbox
