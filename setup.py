@@ -26,7 +26,7 @@ with open(str(script_dir)+'/README.rst', encoding='utf-8') as f:
 
 setup(
     name = 'pdf2textbox',
-    version = '0.2.6',
+    version = '0.2.8',
     description = 'A PDF-to-text converter based on pdfminer2',
     long_description = long_description,
     author = 'Oliver Stapel',
@@ -39,7 +39,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: CPython',
         'Operating System :: POSIX :: Linux',
         'Topic :: Text Processing :: General',
@@ -58,7 +57,6 @@ setup(
     },
     project_urls={
         'Bug Reports': 'https://github.com/0LL13/pdf2textbox/issues',
-        'Say Thanks!': 'https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg',
         'Source': 'https://github.com/0LL13/pdf2textbox',
     },
 )
