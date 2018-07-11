@@ -8,6 +8,8 @@
 .. image:: https://coveralls.io/repos/github/0LL13/pdf2textbox/badge.svg?branch=master
     :target: https://coveralls.io/github/0LL13/pdf2textbox?branch=master
 
+.. image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg 
+   :target: https://saythanks.io/to/0LL13
 
 ============
 pdf2textbox
@@ -42,8 +44,6 @@ Contribute
 ----------
 
 - Issue Tracker: https://github.com/0LL13/pdf2textbox/issues
-- Source Code: https://github.com/0LL13/pdf2textbox/src/pdf2textbox
-- Say Thanks!: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg
 - Source: https://github.com/0LL13/pdf2textbox
 
 Support

@@ -20,7 +20,6 @@ from setuptools import setup
 
 
 script_dir = pathlib.Path(__file__).parent.resolve()
-print(script_dir)
 
 with open(str(script_dir)+'/README.rst', encoding='utf-8') as f:
     long_description = f.read()
