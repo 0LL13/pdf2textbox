@@ -1,19 +1,19 @@
 actionid: py37
 msg: installpkg
-cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py37/bin/pip', 'install', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist/pdf2textbox-0.2.4.zip']
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py37/bin/pip', 'install', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist/pdf2textbox-0.2.9.zip']
 
-Processing ./.tox/dist/pdf2textbox-0.2.4.zip
-Requirement already satisfied: pdfminer2 in ./.tox/py37/lib/python3.7/site-packages (from pdf2textbox==0.2.4) (20151206)
-Requirement already satisfied: requests in ./.tox/py37/lib/python3.7/site-packages (from pdf2textbox==0.2.4) (2.19.1)
-Requirement already satisfied: six in ./.tox/py37/lib/python3.7/site-packages (from pdfminer2->pdf2textbox==0.2.4) (1.11.0)
-Requirement already satisfied: urllib3<1.24,>=1.21.1 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (1.23)
-Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (3.0.4)
-Requirement already satisfied: idna<2.8,>=2.5 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (2.7)
-Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.4) (2018.4.16)
+Processing ./.tox/dist/pdf2textbox-0.2.9.zip
+Requirement already satisfied: pdfminer2 in ./.tox/py37/lib/python3.7/site-packages (from pdf2textbox==0.2.9) (20151206)
+Requirement already satisfied: requests in ./.tox/py37/lib/python3.7/site-packages (from pdf2textbox==0.2.9) (2.19.1)
+Requirement already satisfied: six in ./.tox/py37/lib/python3.7/site-packages (from pdfminer2->pdf2textbox==0.2.9) (1.11.0)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.9) (3.0.4)
+Requirement already satisfied: idna<2.8,>=2.5 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.9) (2.7)
+Requirement already satisfied: urllib3<1.24,>=1.21.1 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.9) (1.23)
+Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py37/lib/python3.7/site-packages (from requests->pdf2textbox==0.2.9) (2018.4.16)
 Building wheels for collected packages: pdf2textbox
   Running setup.py bdist_wheel for pdf2textbox: started
   Running setup.py bdist_wheel for pdf2textbox: finished with status 'done'
-  Stored in directory: /home/frodo/.cache/pip/wheels/f5/1c/e9/c9da4762b3a7bdbde42541ee8e5ae48af76b466847041eaec9
+  Stored in directory: /home/frodo/.cache/pip/wheels/a4/1f/bf/9696be4ebf29b35b3da4f66814b9b241cc3190a9faeb34f07d
 Successfully built pdf2textbox
 Installing collected packages: pdf2textbox
-Successfully installed pdf2textbox-0.2.4
+Successfully installed pdf2textbox-0.2.9
