@@ -25,6 +25,9 @@ recursive-include tests *.py
 
 exclude pdf2textbox/tags
 exclude tests/tags
+exclude *.log
+
+recursive-exclude .tox *
 
 prune .tox
 prune .cache

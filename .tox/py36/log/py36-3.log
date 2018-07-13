@@ -10,7 +10,7 @@ check-manifest==0.37
 coverage==4.5.1
 idna==2.7
 more-itertools==4.2.0
-pdf2textbox==0.2.4
+pdf2textbox==0.3.0
 pdfminer2==20151206
 pluggy==0.6.0
 py==1.5.4

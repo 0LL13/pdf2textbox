@@ -6,6 +6,7 @@ include/
 lib/
 .tox/
 .tox/dist/
+.tox/py*
 .cache/
 .pytest_cache
 __pycache__

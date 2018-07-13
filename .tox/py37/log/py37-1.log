@@ -1,6 +1,6 @@
 actionid: py37
 msg: getenv
-cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py37/bin/pip', 'install', 'check-manifest', 'pytest', 'requests', 'pdfminer2', 'pytest-cov']
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py37/bin/pip', 'install', 'check-manifest', 'pytest', 'requests', 'pdfminer2']
 
 Collecting check-manifest
   Using cached https://files.pythonhosted.org/packages/7a/6a/a723e3a5b2844f47a522013738fea914c9f68d1ef576c97238409bd42e84/check_manifest-0.37-py2.py3-none-any.whl
@@ -10,29 +10,26 @@ Collecting requests
   Using cached https://files.pythonhosted.org/packages/65/47/7e02164a2a3db50ed6d8a6ab1d6d60b69c4c3fdf57a284257925dfc12bda/requests-2.19.1-py2.py3-none-any.whl
 Collecting pdfminer2
   Using cached https://files.pythonhosted.org/packages/fa/97/bd2a2de878438c27ffd710b5d6562c7a0230b0f3ca86059ec635ed231eb1/pdfminer2-20151206-py2.py3-none-any.whl
-Collecting pytest-cov
-  Using cached https://files.pythonhosted.org/packages/30/7d/7f6a78ae44a1248ee28cc777586c18b28a1df903470e5d34a6e25712b8aa/pytest_cov-2.5.1-py2.py3-none-any.whl
+Collecting six>=1.10.0 (from pytest)
+  Using cached https://files.pythonhosted.org/packages/67/4b/141a581104b1f6397bfa78ac9d43d8ad29a7ca43ea90a2d863fe3056e86a/six-1.11.0-py2.py3-none-any.whl
+Collecting pluggy<0.7,>=0.5 (from pytest)
+  Using cached https://files.pythonhosted.org/packages/ba/65/ded3bc40bbf8d887f262f150fbe1ae6637765b5c9534bd55690ed2c0b0f7/pluggy-0.6.0-py3-none-any.whl
+Collecting py>=1.5.0 (from pytest)
+  Using cached https://files.pythonhosted.org/packages/f3/bd/83369ff2dee18f22f27d16b78dd651e8939825af5f8b0b83c38729069962/py-1.5.4-py2.py3-none-any.whl
+Collecting atomicwrites>=1.0 (from pytest)
+  Using cached https://files.pythonhosted.org/packages/0a/e8/cd6375e7a59664eeea9e1c77a766eeac0fc3083bb958c2b41ec46b95f29c/atomicwrites-1.1.5-py2.py3-none-any.whl
 Collecting attrs>=17.4.0 (from pytest)
   Using cached https://files.pythonhosted.org/packages/41/59/cedf87e91ed541be7957c501a92102f9cc6363c623a7666d69d51c78ac5b/attrs-18.1.0-py2.py3-none-any.whl
 Collecting more-itertools>=4.0.0 (from pytest)
   Using cached https://files.pythonhosted.org/packages/85/40/90c3b0393e12b9827381004224de8814686e3d7182f9d4182477f600826d/more_itertools-4.2.0-py3-none-any.whl
-Collecting py>=1.5.0 (from pytest)
-  Using cached https://files.pythonhosted.org/packages/f3/bd/83369ff2dee18f22f27d16b78dd651e8939825af5f8b0b83c38729069962/py-1.5.4-py2.py3-none-any.whl
-Collecting six>=1.10.0 (from pytest)
-  Using cached https://files.pythonhosted.org/packages/67/4b/141a581104b1f6397bfa78ac9d43d8ad29a7ca43ea90a2d863fe3056e86a/six-1.11.0-py2.py3-none-any.whl
-Collecting atomicwrites>=1.0 (from pytest)
-  Using cached https://files.pythonhosted.org/packages/0a/e8/cd6375e7a59664eeea9e1c77a766eeac0fc3083bb958c2b41ec46b95f29c/atomicwrites-1.1.5-py2.py3-none-any.whl
 Requirement already satisfied: setuptools in ./.tox/py37/lib/python3.7/site-packages (from pytest) (40.0.0)
-Collecting pluggy<0.7,>=0.5 (from pytest)
-  Using cached https://files.pythonhosted.org/packages/ba/65/ded3bc40bbf8d887f262f150fbe1ae6637765b5c9534bd55690ed2c0b0f7/pluggy-0.6.0-py3-none-any.whl
-Collecting chardet<3.1.0,>=3.0.2 (from requests)
-  Using cached https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl
 Collecting idna<2.8,>=2.5 (from requests)
   Using cached https://files.pythonhosted.org/packages/4b/2a/0276479a4b3caeb8a8c1af2f8e4355746a97fab05a372e4a2c6a6b876165/idna-2.7-py2.py3-none-any.whl
-Collecting urllib3<1.24,>=1.21.1 (from requests)
-  Using cached https://files.pythonhosted.org/packages/bd/c9/6fdd990019071a4a32a5e7cb78a1d92c53851ef4f56f62a3486e6a7d8ffb/urllib3-1.23-py2.py3-none-any.whl
 Collecting certifi>=2017.4.17 (from requests)
   Using cached https://files.pythonhosted.org/packages/7c/e6/92ad559b7192d846975fc916b65f667c7b8c3a32bea7372340bfe9a15fa5/certifi-2018.4.16-py2.py3-none-any.whl
-Collecting coverage>=3.7.1 (from pytest-cov)
-Installing collected packages: check-manifest, attrs, six, more-itertools, py, atomicwrites, pluggy, pytest, chardet, idna, urllib3, certifi, requests, pdfminer2, coverage, pytest-cov
-Successfully installed atomicwrites-1.1.5 attrs-18.1.0 certifi-2018.4.16 chardet-3.0.4 check-manifest-0.37 coverage-4.5.1 idna-2.7 more-itertools-4.2.0 pdfminer2-20151206 pluggy-0.6.0 py-1.5.4 pytest-3.6.3 pytest-cov-2.5.1 requests-2.19.1 six-1.11.0 urllib3-1.23
+Collecting urllib3<1.24,>=1.21.1 (from requests)
+  Using cached https://files.pythonhosted.org/packages/bd/c9/6fdd990019071a4a32a5e7cb78a1d92c53851ef4f56f62a3486e6a7d8ffb/urllib3-1.23-py2.py3-none-any.whl
+Collecting chardet<3.1.0,>=3.0.2 (from requests)
+  Using cached https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl
+Installing collected packages: check-manifest, six, pluggy, py, atomicwrites, attrs, more-itertools, pytest, idna, certifi, urllib3, chardet, requests, pdfminer2
+Successfully installed atomicwrites-1.1.5 attrs-18.1.0 certifi-2018.4.16 chardet-3.0.4 check-manifest-0.37 idna-2.7 more-itertools-4.2.0 pdfminer2-20151206 pluggy-0.6.0 py-1.5.4 pytest-3.6.3 requests-2.19.1 six-1.11.0 urllib3-1.23
