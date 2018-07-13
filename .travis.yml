@@ -7,8 +7,6 @@ cache: pip
 
 matrix:
   include:
-    - python: 3.3
-      env: TOXENV=py33
     - python: 3.5
       env: TOXENV=py35
     - python: 3.6
