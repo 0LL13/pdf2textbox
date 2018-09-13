@@ -5,7 +5,7 @@
 .. image:: https://badge.fury.io/py/pdf2textbox.svg
     :target: https://badge.fury.io/py/pdf2textbox
 
-.. image:: https://img.shields.io/pypi/pyversions/Django.svg   
+.. image:: https://img.shields.io/pypi/pyversions/pdf2textbox.svg   
     :alt: PyPI - Python Version
 
 ============
