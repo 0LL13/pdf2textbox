@@ -91,7 +91,7 @@ def _get_url(url=None):
 
     # Zwei Nachnamen, ein Zitat - verliert einen Absatz (des Vorredners)
     # Einzelnes Wort ("intensiver") ohne Kontext
-    url5 = '{}Id=MMP16%2F8|368|369'.format(base)
+    url5 = '{}Id=MMP16%2F8|542|544'.format(base)
     #url = url4
 
     return url

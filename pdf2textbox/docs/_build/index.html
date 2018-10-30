@@ -1,0 +1,158 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>pdf2textbox’s doc &#8212; pdf2textbox 0.1.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pdf2textbox-s-doc">
+<h1>pdf2textbox’s doc<a class="headerlink" href="#pdf2textbox-s-doc" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>A PDF-to-text converter based on pdfminer2 (which is based on pdfminer.six which is based on pdfminer). Converts PDF files with up to 3 columns and a header (optional) to text and avoids many caveats that multi-columned PDF files have in store for PDF conversion.</p>
+<p>Allows command line parameter -s (–slice) to indicate that only part of the PDF document is of interest. Start and end page will then be either retreived from the document’s name using ‘_’ or ‘|’ as delimiters or - if start and end page cannot be found - user input is requested.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Extract PDF-files with <a class="reference external" href="https://pypi.python.org/pypi/pdfminer2">pdfminer2</a></p>
+</div>
+<div class="section" id="what-s-the-difference">
+<h2>What’s the difference?<a class="headerlink" href="#what-s-the-difference" title="Permalink to this headline">¶</a></h2>
+<p>While pdfminer2 works well for plain text there will be issues when that
+text is in two or more columns, when there are indented quotes, headers on
+every page, pagenumbers, dates, and more. The solutions that can be found
+(i.e. pyPDF, pdfminer2, pdfx, …)</p>
+<ul class="simple">
+<li>Will include headers into the text flow</li>
+<li>Will return small or very small (DetailledAggregator) text units</li>
+<li>Will return text from left to right without acknowledging the columns</li>
+<li>Will mix text from different columns into one text flow</li>
+</ul>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>Stackoverflow hottest answer tagged <a class="reference external" href="https://stackoverflow.com/a/44476759/6597765">pdfminer</a></p>
+<p>Using <a class="reference external" href="https://www.metachris.com/pdfx/">PDFx</a></p>
+<p>Using <a class="reference external" href="https://medium.com/&#64;rqaiserr/how-to-convert-pdfs-into-searchable-key-words-with-python-85aab86c544f">PyPDF2</a></p>
+<p class="last">pdfminer using a <a class="reference external" href="https://stackoverflow.com/a/19179114/6597765">DetailedAggregator</a></p>
+</div>
+<p>pdf2textbox returns the extracted text in two meta structures: a dict that
+differentiates between ‘header’ and ‘columns’ and boxes similar to the paragraphs
+of the original text  which makes the final conversion into a coherent and
+meaningful text document easier:</p>
+<ul class="simple">
+<li>Split text into coherent sentences</li>
+<li>Differentiate dots at the end of a sentence from dots behind dates, titles, etc.</li>
+<li>Allows simple regex routines to combine words seperated by hyphens (at linebreaks)</li>
+<li>Allign information from header to parts of text (i.e. page number, date, …)</li>
+</ul>
+<p>Graphs, tables, and other visual or graphic 2D blocks, and tocs will cause havock.</p>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>Convert PDF to text in the original order. This works well for PDF-files
+without tables, graphs, and other stuff.</p>
+<p>After extracting the text in boxes, there still has to be run another
+function to strip the text of special signs, zeroes and the like.</p>
+</div>
+<div class="section" id="note">
+<h2>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h2>
+<p>Often the textboxes will NOT be identical with paragraphs of the PDF-file.
+There might be cases when a textbox ends mid-sentence just to be
+continued with the next box. This is due to the PDF file’s graphic-oriented organization of content. However, the order of text will be correct.</p>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">pdf2textbox’s doc</a><ul>
+<li><a class="reference internal" href="#what-s-the-difference">What’s the difference?</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#note">Note</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Oliver Stapel.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,5 +1,0 @@
-actionid: py37
-msg: envreport
-cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py37/bin/pip', 'freeze']
-
-pdf2textbox==0.2.4

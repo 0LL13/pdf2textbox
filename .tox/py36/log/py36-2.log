@@ -1,12 +1,19 @@
 actionid: py36
 msg: installpkg
-cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py36/bin/pip', 'install', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist/pdf2textbox-0.2.3.zip']
+cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py36/bin/pip', 'install', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist/pdf2textbox-0.3.0.zip']
 
-Processing ./.tox/dist/pdf2textbox-0.2.3.zip
+Processing ./.tox/dist/pdf2textbox-0.3.0.zip
+Requirement already satisfied: pdfminer2 in ./.tox/py36/lib/python3.6/site-packages (from pdf2textbox==0.3.0) (20151206)
+Requirement already satisfied: requests in ./.tox/py36/lib/python3.6/site-packages (from pdf2textbox==0.3.0) (2.19.1)
+Requirement already satisfied: six in ./.tox/py36/lib/python3.6/site-packages (from pdfminer2->pdf2textbox==0.3.0) (1.11.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.3.0) (2018.4.16)
+Requirement already satisfied: urllib3<1.24,>=1.21.1 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.3.0) (1.23)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.3.0) (3.0.4)
+Requirement already satisfied: idna<2.8,>=2.5 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.3.0) (2.7)
 Building wheels for collected packages: pdf2textbox
   Running setup.py bdist_wheel for pdf2textbox: started
   Running setup.py bdist_wheel for pdf2textbox: finished with status 'done'
-  Stored in directory: /home/frodo/.cache/pip/wheels/ce/08/78/3c44a11b1ecdad3391cd78a0d6d71a3e75210f0ccf14920450
+  Stored in directory: /home/frodo/.cache/pip/wheels/2a/ba/7d/87606b8ac34e7831c5af05f6205771b7d4481445de88f59885
 Successfully built pdf2textbox
 Installing collected packages: pdf2textbox
-Successfully installed pdf2textbox-0.2.3
+Successfully installed pdf2textbox-0.3.0
