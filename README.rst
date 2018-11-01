@@ -10,10 +10,9 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |requires|
+      - | |travis|
     * - package
-      - | |version| |wheel| |supported-versions| |supported-implementations|
-        | |commits-since|
+      - | |version| |supported-versions| |supported-implementations|
 
 .. |travis| image:: https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
     :target: https://travis-ci.org/0LL13/pdf2textbox
@@ -31,35 +30,21 @@ Overview
 .. image:: https://img.shields.io/cocoapods/l/AFNetworking.svg
     :alt: CocoaPods
 
-
 .. |docs| image:: https://readthedocs.org/projects/pytest-cov/badge/?style=flat
-    :target: https://readthedocs.org/projects/pytest-cov
+    :target: https://readthedocs.org/projects/pdf2textbox
     :alt: Documentation Status
 
-
-.. |requires| image:: https://requires.io/github/pytest-dev/pytest-cov/requirements.svg?branch=master
-    :alt: Requirements Status
-    :target: https://requires.io/github/pytest-dev/pytest-cov/requirements/?branch=master
-
-.. |version| image:: https://img.shields.io/pypi/v/pytest-cov.svg
+.. |version| image:: https://img.shields.io/pypi/v/pdf2textbox.svg
     :alt: PyPI Package latest release
-    :target: https://pypi.python.org/pypi/pytest-cov
+    :target: https://pypi.python.org/pypi/pdf2textbox
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/pytest-dev/pytest-cov/v2.5.1.svg
-    :alt: Commits since latest release
-    :target: https://github.com/pytest-dev/pytest-cov/compare/v2.5.1...master
-
-.. |wheel| image:: https://img.shields.io/pypi/wheel/pytest-cov.svg
-    :alt: PyPI Wheel
-    :target: https://pypi.python.org/pypi/pytest-cov
-
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/pytest-cov.svg
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/pdf2textbox.svg
     :alt: Supported versions
-    :target: https://pypi.python.org/pypi/pytest-cov
+    :target: https://pypi.python.org/pypi/pdf2textbox
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/pytest-cov.svg
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/pdf2textbox.svg
     :alt: Supported implementations
-    :target: https://pypi.python.org/pypi/pytest-cov
+    :target: https://pypi.python.org/pypi/pdf2textbox
 
 .. end-badges
 

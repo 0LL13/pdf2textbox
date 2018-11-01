@@ -1,12 +1,49 @@
+.. start-badges
 
-.. image:: https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
+.. list-table::
+    :stub-columns: 1
+
+    * - docs
+      - |docs|
+    * - tests
+      - | |travis|
+    * - package
+      - | |version| |supported-versions| |supported-implementations|
+
+.. |travis| image:: https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
     :target: https://travis-ci.org/0LL13/pdf2textbox
+    :alt: Travis-CI Build Status
 
 .. image:: https://badge.fury.io/py/pdf2textbox.svg
     :target: https://badge.fury.io/py/pdf2textbox
 
-.. image:: https://img.shields.io/pypi/pyversions/pdf2textbox.svg
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/pdf2textbox.svg
     :alt: PyPI - Python Version
+
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/pdf2textbox.svg
+    :alt: PyPI - Implementation
+
+.. image:: https://img.shields.io/cocoapods/l/AFNetworking.svg
+    :alt: CocoaPods
+
+.. |docs| image:: https://readthedocs.org/projects/pytest-cov/badge/?style=flat
+    :target: https://readthedocs.org/projects/pdf2textbox
+    :alt: Documentation Status
+
+.. |version| image:: https://img.shields.io/pypi/v/pdf2textbox.svg
+    :alt: PyPI Package latest release
+    :target: https://pypi.python.org/pypi/pdf2textbox
+
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/pdf2textbox.svg
+    :alt: Supported versions
+    :target: https://pypi.python.org/pypi/pdf2textbox
+
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/pdf2textbox.svg
+    :alt: Supported implementations
+    :target: https://pypi.python.org/pypi/pdf2textbox
+
+.. end-badges
+
 
 
 ============
