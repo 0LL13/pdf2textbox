@@ -24,14 +24,14 @@ What's the difference?
 ----------------------
 
 While pdfminer2 works well for plain text there will be issues when that
-text is in two or more columns, when there are indented quotes, headers on
-every page, pagenumbers, dates, and more. The solutions that can be found
-(i.e. pyPDF, pdfminer2, pdfx, ...)
+text comes in two or more columns, when there are indented quotes, headers, 
+and other options to edit text that are not uncommon. The solutions that 
+can be found as yet (i.e. pyPDF, pdfminer2, pdfx, ...)
 
-* Will include headers into the text flow
-* Will return small or very small (DetailledAggregator) text units
-* Will return text from left to right without acknowledging the columns
-* Will mix text from different columns into one text flow
+* ... will include headers into the text flow
+* ... will return small or very small (DetailledAggregator) text units
+* ... will return text from left to right without acknowledging the columns
+* ... will mix text from different columns into one text flow
 
 .. seealso::
 
