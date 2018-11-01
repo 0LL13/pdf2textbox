@@ -26,6 +26,7 @@ with open(str(script_dir)+'/README.rst', encoding='utf-8') as f:
 
 setup(
     name = 'pdf2textbox',
+    packages=['pdf2textbox/'],
     version = '0.3.2',
     description = 'A PDF-to-text converter based on pdfminer2',
     long_description = long_description,
@@ -45,7 +46,7 @@ setup(
         'Topic :: Text Processing :: General',
         ],
     keywords = 'PDF pdfminer2 PDFconversion text-processing',
-    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    #packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     install_requires=['pdfminer2', 'requests'],
     extras_require={
         'dev': ['check-manifest'],
