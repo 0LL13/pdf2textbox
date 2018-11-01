@@ -27,7 +27,7 @@ with open(str(script_dir)+'/README.rst', encoding='utf-8') as f:
 setup(
     name = 'pdf2textbox',
     packages=['pdf2textbox/'],
-    version = '0.3.2',
+    version = '0.3.3',
     description = 'A PDF-to-text converter based on pdfminer2',
     long_description = long_description,
     author = 'Oliver Stapel',
@@ -40,7 +40,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: CPython',
         'Operating System :: POSIX :: Linux',
         'Topic :: Text Processing :: General',
