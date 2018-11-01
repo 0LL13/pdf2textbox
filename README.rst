@@ -13,21 +13,14 @@ Overview
       - | |travis|
     * - package
       - | |version| |supported-versions| |supported-implementations|
+    * - license
+      - | |license|
 
 .. |travis| image:: https://travis-ci.org/0LL13/pdf2textbox.svg?branch=master
     :target: https://travis-ci.org/0LL13/pdf2textbox
     :alt: Travis-CI Build Status
 
-.. image:: https://badge.fury.io/py/pdf2textbox.svg
-    :target: https://badge.fury.io/py/pdf2textbox
-
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/pdf2textbox.svg
-    :alt: PyPI - Python Version
-
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/pdf2textbox.svg
-    :alt: PyPI - Implementation
-
-.. image:: https://img.shields.io/cocoapods/l/AFNetworking.svg
+.. |license| image:: https://img.shields.io/cocoapods/l/AFNetworking.svg
     :alt: CocoaPods
 
 .. |docs| image:: https://readthedocs.org/projects/pytest-cov/badge/?style=flat
