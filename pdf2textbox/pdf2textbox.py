@@ -9,10 +9,8 @@ pdf2textbox.py
 '''
 import io
 import os
-import sys
-
-import requests
 import re
+import requests
 
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.converter import PDFPageAggregator
