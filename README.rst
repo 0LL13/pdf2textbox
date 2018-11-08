@@ -46,10 +46,10 @@ Overview
 pdf2textbox
 ============
 
-A PDF-to-text converter based on pdfminer2 (which is based on 
+A PDF-to-text converter based on pdfminer2 (which is based on
 pdfminer.six which is based on pdfminer).
 Converts PDF files with up to 3 columns and a header (optional)
-to text and avoids most caveats that multi-columned PDF files have 
+to text and avoids most caveats that multi-columned PDF files have
 in store for PDF conversion.
 
 
@@ -59,9 +59,9 @@ Features
 Convert PDF to text in the original order. This works well for PDF-files
 without tables, graphs, and other stuff.
 
-Allows command line parameter -s (--slice) to indicate that only part of 
-the PDF document is of interest. Start and end page will then be either 
-retreived from the document's name using '_' or '|' as delimiters or - 
+Allows command line parameter -s (--slice) to indicate that only part of
+the PDF document is of interest. Start and end page will then be either
+retreived from the document's name using '_' or '|' as delimiters or -
 if start and end page cannot be found - user input is requested.
 
 

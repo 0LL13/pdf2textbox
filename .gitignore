@@ -1,6 +1,9 @@
 archive/
 bin/
 build/
+_build
+_static
+_templates
 dist/
 include/
 lib/
