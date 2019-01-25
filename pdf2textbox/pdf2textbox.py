@@ -91,6 +91,11 @@ def _get_url(url=None):
     url5 = '{}Id=MMP16%2F8|542|544'.format(base)
     #url = url4
 
+    # der obere Teil der rechten Spalte wird zu früh wiedergegeben: linke
+    # und rechte Spalte werden gemischt
+    url6 = '{}Id=MMP14%2F4|175|187'.format(base)
+
+    url = url6
     return url
 
 
@@ -101,7 +106,7 @@ def _get_local_file():
     Returns pdf_loc.
     '''
     #pdf_loc = './data/Id=MMP16%2F139_14622_14624.pdf'  # needs page_from, page_to
-    pdf_loc = './data/Id=MMP15%2F57_5694_5696.pdf'
+    #pdf_loc = './data/Id=MMP15%2F57_5694_5696.pdf'
     #pdf_loc = './data/01a_only_text.pdf'
     #pdf_loc = './data/02a_two_cols.pdf'
     #pdf_loc = './data/03a_three_cols.pdf'
@@ -481,21 +486,34 @@ def _get_box_width(box_parameters, Y_HEADER):
 
 
 def _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose):
-    headers = list()
+    if verbose:
+        print('UPPER_PAGE_EDGE', UPPER_PAGE_EDGE)
+        print('Y1_MAX', Y1_MAX)
 
+    headers = list()
+    cols = list()
     for box in box_parameters:
         if box.y1 == Y1_MAX:
             headers.append(box)
+        else:
+            cols.append(box)
+
+    upper_cols_border = 0
+    for box in cols:
+        if box.y1 > upper_cols_border:
+            if box.y1 > box.y0:
+                upper_cols_border = box.y1
 
     y0 = Y1_MAX
     for box in headers:
-        if box.y0 < y0:
+        if box.y0 < y0 and box.y0 > upper_cols_border:
             y0 = box.y0
 
     Y_HEADER = y0
 
     if verbose:
         print(box_parameters)
+        print('headers', headers)
         print('Y_HEADER', Y_HEADER)
     return Y_HEADER
 
