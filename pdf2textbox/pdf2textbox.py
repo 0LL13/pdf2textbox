@@ -95,7 +95,9 @@ def _get_url(url=None):
     # und rechte Spalte werden gemischt
     url6 = '{}Id=MMP14%2F4|175|187'.format(base)
 
-    url = url6
+    url7 = '{}Id=MMP14%2F149|17408|17423'.format(base)
+
+    url = url7
     return url
 
 
@@ -256,9 +258,9 @@ def _pdf_to_text_slice(pdf, page_from, page_to, verbose):
         LTPage = device.get_result()
         try:
             if index >= 1:
-                index = index + 2
+                index = index + 2       # why?
             else:
-                index = 1
+                index = 1               # shouldn't that be 3 ?
             if int(page.doc.catalog['PageLabels']['Nums'][index]['St']) ==\
                     int(page_from):
                         token_start = True
@@ -465,6 +467,7 @@ def _choose_col(x0, x1, SIDE_PAGE_EDGE, BOX_WIDTH_MAX, verbose):
         col = 'right_column'
 
     if verbose:
+        print('x0, x1, BOX_WIDTH_MAX, col')
         print(x0, x1, BOX_WIDTH_MAX, col)
     return col
 
@@ -498,23 +501,26 @@ def _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose):
         else:
             cols.append(box)
 
+    # finding the upper border of columns
     upper_cols_border = 0
     for box in cols:
         if box.y1 > upper_cols_border:
             if box.y1 > box.y0:
                 upper_cols_border = box.y1
 
-    y0 = Y1_MAX
+    # finding the lower border of headers
+    y0 = upper_cols_border          # instead of Y1_MAX
     for box in headers:
-        if box.y0 < y0 and box.y0 > upper_cols_border:
+        if box.y0 < y0:
             y0 = box.y0
 
     Y_HEADER = y0
 
     if verbose:
         print(box_parameters)
-        print('headers', headers)
-        print('Y_HEADER', Y_HEADER)
+        print('upper_cols_border:', upper_cols_border)
+        print('headers:', headers)
+        print('Y_HEADER:', Y_HEADER)
     return Y_HEADER
 
 

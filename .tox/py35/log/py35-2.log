@@ -1,19 +1,22 @@
 actionid: py35
 msg: installpkg
-cmdargs: ['/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/py35/bin/pip', 'install', '/home/frodo/Python-Projekte/.virtualenvs/pdf2textbox/.tox/dist/pdf2textbox-0.3.1.zip']
+cmdargs: '/home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py35/bin/python -m pip install --exists-action w /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/.tmp/package/1/pdf2textbox-0.3.2.zip'
 
-Processing ./.tox/dist/pdf2textbox-0.3.1.zip
-Requirement already satisfied: pdfminer2 in ./.tox/py35/lib/python3.5/site-packages (from pdf2textbox==0.3.1) (20151206)
-Requirement already satisfied: requests in ./.tox/py35/lib/python3.5/site-packages (from pdf2textbox==0.3.1) (2.19.1)
-Requirement already satisfied: six in ./.tox/py35/lib/python3.5/site-packages (from pdfminer2->pdf2textbox==0.3.1) (1.11.0)
-Requirement already satisfied: urllib3<1.24,>=1.21.1 in ./.tox/py35/lib/python3.5/site-packages (from requests->pdf2textbox==0.3.1) (1.23)
-Requirement already satisfied: idna<2.8,>=2.5 in ./.tox/py35/lib/python3.5/site-packages (from requests->pdf2textbox==0.3.1) (2.7)
-Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py35/lib/python3.5/site-packages (from requests->pdf2textbox==0.3.1) (2018.4.16)
-Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./.tox/py35/lib/python3.5/site-packages (from requests->pdf2textbox==0.3.1) (3.0.4)
+Processing ./.tox/.tmp/package/1/pdf2textbox-0.3.2.zip
+Requirement already satisfied: pdfminer2 in ./.tox/py35/lib/python3.5/site-packages (from pdf2textbox==0.3.2) (20151206)
+Requirement already satisfied: requests in ./.tox/py35/lib/python3.5/site-packages (from pdf2textbox==0.3.2) (2.20.0)
+Requirement already satisfied: six in ./.tox/py35/lib/python3.5/site-packages (from pdfminer2->pdf2textbox==0.3.2) (1.11.0)
+Requirement already satisfied: idna<2.8,>=2.5 in ./.tox/py35/lib/python3.5/site-packages (from requests->pdf2textbox==0.3.2) (2.7)
+Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py35/lib/python3.5/site-packages (from requests->pdf2textbox==0.3.2) (2018.10.15)
+Requirement already satisfied: urllib3<1.25,>=1.21.1 in ./.tox/py35/lib/python3.5/site-packages (from requests->pdf2textbox==0.3.2) (1.24.1)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./.tox/py35/lib/python3.5/site-packages (from requests->pdf2textbox==0.3.2) (3.0.4)
 Building wheels for collected packages: pdf2textbox
   Running setup.py bdist_wheel for pdf2textbox: started
   Running setup.py bdist_wheel for pdf2textbox: finished with status 'done'
-  Stored in directory: /home/frodo/.cache/pip/wheels/bd/3d/24/e4183e48cecd1f1be56839ddfb123f0184b2f7c7b396ffc5a6
+  Stored in directory: /home/sam/.cache/pip/wheels/e1/c7/bf/a1c023a5b5b5ffea88c91cb9ae042f5cf94f41a2377215bf8d
 Successfully built pdf2textbox
 Installing collected packages: pdf2textbox
-Successfully installed pdf2textbox-0.3.1
+  Found existing installation: pdf2textbox 0.3.2
+    Not uninstalling pdf2textbox at /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox, outside environment /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py35
+    Can't uninstall 'pdf2textbox'. No files were found to uninstall.
+Successfully installed pdf2textbox-0.3.2
