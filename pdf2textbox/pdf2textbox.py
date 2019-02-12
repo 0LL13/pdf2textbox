@@ -97,9 +97,13 @@ def _get_url(url=None):
 
     url7 = '{}Id=MMP14%2F149|17408|17423'.format(base)
 
+    # will miss out first sentence on page 8324 if _fill_boxes has y0 >= Y_HEADER
+    # --> changed to y0 > Y_HEADER works
     url8 = '{}Id=MMP14%2F72|8323|8332'.format(base)
 
-    url = url8
+    url9 = '{}Id=MMP14%2F149|17408|17423'.format(base)
+
+    url = url9
     return url
 
 
@@ -376,7 +380,7 @@ def _fill_boxes(LTPage, boxes, page_nr, verbose):
         if verbose:
             print('Deciding which part of the page: header or columns ...')
             print(y0, Y_HEADER)
-        if y0 > Y_HEADER:
+        if y0 >= Y_HEADER:
             boxes[page_nr]['header'].append(box(x0, x1, y0, y1, text))
             if verbose:
                 print('--> header')
