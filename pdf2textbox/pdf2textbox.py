@@ -97,7 +97,9 @@ def _get_url(url=None):
 
     url7 = '{}Id=MMP14%2F149|17408|17423'.format(base)
 
-    url = url7
+    url8 = '{}Id=MMP14%2F72|8323|8332'.format(base)
+
+    url = url8
     return url
 
 
@@ -374,10 +376,11 @@ def _fill_boxes(LTPage, boxes, page_nr, verbose):
         if verbose:
             print('Deciding which part of the page: header or columns ...')
             print(y0, Y_HEADER)
-        if y0 >= Y_HEADER:
+        if y0 > Y_HEADER:
             boxes[page_nr]['header'].append(box(x0, x1, y0, y1, text))
             if verbose:
                 print('--> header')
+                print(box)
         elif NR_OF_COLS == 1:
             boxes[page_nr]['column'].append(box(x0, x1, y0, y1, text))
         elif NR_OF_COLS == 2:
