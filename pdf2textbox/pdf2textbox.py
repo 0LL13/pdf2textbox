@@ -103,7 +103,10 @@ def _get_url(url=None):
 
     url9 = '{}Id=MMP14%2F149|17408|17423'.format(base)
 
-    url = url9
+    # will return empty lists for columns
+    url10 = '{}Id=MMP14%2F56|6267|6269'.format(base)
+
+    #url = url10
     return url
 
 
@@ -118,7 +121,7 @@ def _get_local_file():
     #pdf_loc = './data/01a_only_text.pdf'
     #pdf_loc = './data/02a_two_cols.pdf'
     #pdf_loc = './data/03a_three_cols.pdf'
-    #pdf_loc = './data/04a_text_and_header.pdf'
+    pdf_loc = './data/04a_text_and_header.pdf'
     #pdf_loc = './data/05a_two_cols_and_header.pdf'
     #pdf_loc = './data/06a_three_cols_and_header.pdf'
 
@@ -376,21 +379,31 @@ def _fill_boxes(LTPage, boxes, page_nr, verbose):
             text = None
         x0, x1, y0, y1 = _get_box_borders(LTLine)
 
-        box = namedtuple('box', ['x0', 'x1', 'y0', 'y1', 'text'])
+        # I change this as well ...
+        # box = namedtuple('box', ['x0', 'x1', 'y0', 'y1', 'text'])
+        box = namedtuple('box', 'x0, x1, y0, y1, text')
         if verbose:
             print('Deciding which part of the page: header or columns ...')
-            print(y0, Y_HEADER)
+            print('y0, Y_HEADER: ', y0, Y_HEADER)
         if y0 >= Y_HEADER:
             boxes[page_nr]['header'].append(box(x0, x1, y0, y1, text))
             if verbose:
                 print('--> header')
-                print(box)
+                print(text)
         elif NR_OF_COLS == 1:
             boxes[page_nr]['column'].append(box(x0, x1, y0, y1, text))
         elif NR_OF_COLS == 2:
+            if verbose:
+                print('x0, BOX_WIDTH_MAX: ', x0, BOX_WIDTH_MAX)
             if x0 < BOX_WIDTH_MAX:
+                if verbose:
+                    print('--> goes to left column')
+                    print(text)
                 boxes[page_nr]['left_column'].append(box(x0, x1, y0, y1, text))
             else:
+                if verbose:
+                    print('--> goes to right column')
+                    print(text)
                 boxes[page_nr]['right_column'].append(box(x0, x1, y0, y1, text))
         elif NR_OF_COLS == 3:
             col = _choose_col(x0, x1, SIDE_PAGE_EDGE, BOX_WIDTH_MAX, verbose)
@@ -405,8 +418,9 @@ def _get_page_parameters(LTPage, verbose):
     SIDE_PAGE_EDGE = round(LTPage.bbox[2])
     UPPER_PAGE_EDGE = round(LTPage.bbox[3])
     Y_HEADER = UPPER_PAGE_EDGE
-    # box = namedtuple('box', ['x0', 'x1', 'y0', 'y1']) ...... I change this!
-    box = namedtuple('box', 'x0, x1, y0, y1')
+    # changing the list in namedtuple to string:
+    # box = namedtuple('box', ['x0', 'x1', 'y0', 'y1'])
+    params = namedtuple('params', 'x0, x1, y0, y1')
     box_parameters = list()
     X0_MIN = X1_MAX = Y0_MIN = Y0_MAX = Y1_MAX = 0
 
@@ -418,7 +432,7 @@ def _get_page_parameters(LTPage, verbose):
         Y0_MAX = _get_Y0_MAX(y0, Y0_MAX)
         Y1_MAX = _get_Y1_MAX(y1, Y1_MAX)
 
-        box_parameters.append(box(x0, x1, y0, y1))
+        box_parameters.append(params(x0, x1, y0, y1))
 
     Y_HEADER = _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose)
     BOX_WIDTH_MAX = _get_box_width(box_parameters, Y_HEADER)
@@ -447,6 +461,7 @@ def _get_page_parameters(LTPage, verbose):
 
 
 def _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes):
+    print('_init_boxes values: Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes\n',Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes)
     if Y_HEADER > 0 and Y_HEADER <= UPPER_PAGE_EDGE:
         boxes[page_nr]['header'] = list()
     if NR_OF_COLS == 1:
@@ -458,12 +473,9 @@ def _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes):
         boxes[page_nr]['left_column'] = list()
         boxes[page_nr]['center_column'] = list()
         boxes[page_nr]['right_column'] = list()
-    else:   # more than three columns doesn't make sense, trying two
+    else:   # more than three columns doesn't make sense, defaulting to two
         boxes[page_nr]['left_column'] = list()
         boxes[page_nr]['right_column'] = list()
-#        for counter in range(NR_OF_COLS):
-#            col = 'col_{}'.format(counter+1)
-#            boxes[page_nr][col] = list()
 
     return boxes
 
@@ -484,16 +496,16 @@ def _choose_col(x0, x1, SIDE_PAGE_EDGE, BOX_WIDTH_MAX, verbose):
 
 def _get_box_width(box_parameters, Y_HEADER):
     BOX_WIDTH_MAX = 0
-    for box in box_parameters:
-        if box.y0 < Y_HEADER:
-            if (box.x1 - box.x0) > BOX_WIDTH_MAX:
-                if box.y0 < box.y1:
-                    BOX_WIDTH_MAX = box.x1 - box.x0
+    for params in box_parameters:
+        if params.y0 < Y_HEADER:
+            if (params.x1 - params.x0) > BOX_WIDTH_MAX:
+                if params.y0 < params.y1:
+                    BOX_WIDTH_MAX = params.x1 - params.x0
 
     if BOX_WIDTH_MAX == 0:
-        for box in box_parameters:
-            if (box.x1 - box.x0) > BOX_WIDTH_MAX:
-                BOX_WIDTH_MAX = box.x1 - box.x0
+        for params in box_parameters:
+            if (params.x1 - params.x0) > BOX_WIDTH_MAX:
+                BOX_WIDTH_MAX = params.x1 - params.x0
 
     return BOX_WIDTH_MAX
 
@@ -505,24 +517,27 @@ def _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose):
 
     headers = list()
     cols = list()
-    for box in box_parameters:
-        if box.y1 == Y1_MAX:
-            headers.append(box)
+    for params in box_parameters:
+        if params.y1 == Y1_MAX:
+            headers.append(params)
         else:
-            cols.append(box)
+            cols.append(params)
 
     # finding the upper border of columns
     upper_cols_border = 0
-    for box in cols:
-        if box.y1 > upper_cols_border:
-            if box.y1 > box.y0:
-                upper_cols_border = box.y1
+    for params in cols:
+        if params.y1 > upper_cols_border:
+            if params.y1 > params.y0:
+                upper_cols_border = params.y1
 
     # finding the lower border of headers
-    y0 = upper_cols_border          # instead of Y1_MAX
-    for box in headers:
-        if box.y0 < y0:
-            y0 = box.y0
+    y0 = 0
+    for params in headers:
+        if params.y0 < upper_cols_border:
+            if params.y0 > y0:
+                y0 = params.y0
+        else:
+            y0 = upper_cols_border
 
     Y_HEADER = y0
 
@@ -538,15 +553,15 @@ def _only_one_box(box_parameters, NR_OF_COLS):
     if len(box_parameters) == NR_OF_COLS:
         x0 = x1 = 0
         y1 = 0
-        for box in box_parameters:
+        for params in box_parameters:
             if x1 == 0:
-                x0 = box.x0
-                x1 = box.x1
-                y1 = box.y1
+                x0 = params.x0
+                x1 = params.x1
+                y1 = params.y1
             else:
-                if x0 == box.x0 and x1 == box.x1:
+                if x0 == params.x0 and x1 == params.x1:
                     pass
-                elif y1 == box.y1:
+                elif y1 == params.y1:
                     pass
                 else:
                     return False
@@ -565,22 +580,22 @@ def _all_boxes_aligned(box_parameters, NR_OF_COLS):
     x0 = x1 = None
     y1 = None
     if len(box_parameters) > NR_OF_COLS:           # vertical alignment
-        for box in box_parameters:
+        for params in box_parameters:
             if x0 == x1 == None:
-                x0 = box.x0
-                x1 = box.x1
+                x0 = params.x0
+                x1 = params.x1
             else:
-                if x0 == box.x0 and x1 == box.x1:
+                if x0 == params.x0 and x1 == params.x1:
                     pass
                 else:
                     return False
 
     elif len(box_parameters) <= NR_OF_COLS:        # horizontal alignment
-        for box in box_parameters:
+        for params in box_parameters:
             if y1 == None:
-                y1 = box.y1
+                y1 = params.y1
             else:
-                if y1 == box.y1:
+                if y1 == params.y1:
                     pass
                 else:
                     return False
