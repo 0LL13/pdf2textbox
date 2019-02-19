@@ -405,7 +405,8 @@ def _get_page_parameters(LTPage, verbose):
     SIDE_PAGE_EDGE = round(LTPage.bbox[2])
     UPPER_PAGE_EDGE = round(LTPage.bbox[3])
     Y_HEADER = UPPER_PAGE_EDGE
-    box = namedtuple('box', ['x0', 'x1', 'y0', 'y1'])
+    # box = namedtuple('box', ['x0', 'x1', 'y0', 'y1']) ...... I change this!
+    box = namedtuple('box', 'x0, x1, y0, y1')
     box_parameters = list()
     X0_MIN = X1_MAX = Y0_MIN = Y0_MAX = Y1_MAX = 0
 
@@ -446,7 +447,7 @@ def _get_page_parameters(LTPage, verbose):
 
 
 def _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes):
-    if Y_HEADER > 0 and Y_HEADER < UPPER_PAGE_EDGE:
+    if Y_HEADER > 0 and Y_HEADER <= UPPER_PAGE_EDGE:
         boxes[page_nr]['header'] = list()
     if NR_OF_COLS == 1:
         boxes[page_nr]['column'] = list()
@@ -457,10 +458,12 @@ def _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes):
         boxes[page_nr]['left_column'] = list()
         boxes[page_nr]['center_column'] = list()
         boxes[page_nr]['right_column'] = list()
-    else:
-        for counter in range(NR_OF_COLS):
-            col = 'col_{}'.format(counter+1)
-            boxes[page_nr][col] = list()
+    else:   # more than three columns doesn't make sense, trying two
+        boxes[page_nr]['left_column'] = list()
+        boxes[page_nr]['right_column'] = list()
+#        for counter in range(NR_OF_COLS):
+#            col = 'col_{}'.format(counter+1)
+#            boxes[page_nr][col] = list()
 
     return boxes
 
