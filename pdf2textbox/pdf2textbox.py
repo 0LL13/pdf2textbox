@@ -106,7 +106,7 @@ def _get_url(url=None):
     # will return empty lists for columns
     url10 = '{}Id=MMP14%2F56|6267|6269'.format(base)
 
-    #url = url10
+    url = url10
     return url
 
 
@@ -121,7 +121,7 @@ def _get_local_file():
     #pdf_loc = './data/01a_only_text.pdf'
     #pdf_loc = './data/02a_two_cols.pdf'
     #pdf_loc = './data/03a_three_cols.pdf'
-    pdf_loc = './data/04a_text_and_header.pdf'
+    #pdf_loc = './data/04a_text_and_header.pdf'
     #pdf_loc = './data/05a_two_cols_and_header.pdf'
     #pdf_loc = './data/06a_three_cols_and_header.pdf'
 
@@ -461,7 +461,6 @@ def _get_page_parameters(LTPage, verbose):
 
 
 def _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes):
-    print('_init_boxes values: Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes\n',Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes)
     if Y_HEADER > 0 and Y_HEADER <= UPPER_PAGE_EDGE:
         boxes[page_nr]['header'] = list()
     if NR_OF_COLS == 1:
