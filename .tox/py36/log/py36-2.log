@@ -1,22 +1,22 @@
 actionid: py36
 msg: installpkg
-cmdargs: '/home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py36/bin/python -m pip install --exists-action w /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/.tmp/package/1/pdf2textbox-0.3.2.zip'
+cmdargs: '/home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py36/bin/python -m pip install --exists-action w /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/.tmp/package/1/pdf2textbox-0.4.1.zip'
 
-Processing ./.tox/.tmp/package/1/pdf2textbox-0.3.2.zip
-Requirement already satisfied: pdfminer2 in ./.tox/py36/lib/python3.6/site-packages (from pdf2textbox==0.3.2) (20151206)
-Requirement already satisfied: requests in ./.tox/py36/lib/python3.6/site-packages (from pdf2textbox==0.3.2) (2.20.0)
-Requirement already satisfied: six in ./.tox/py36/lib/python3.6/site-packages (from pdfminer2->pdf2textbox==0.3.2) (1.11.0)
-Requirement already satisfied: urllib3<1.25,>=1.21.1 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.3.2) (1.24.1)
-Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.3.2) (3.0.4)
-Requirement already satisfied: idna<2.8,>=2.5 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.3.2) (2.7)
-Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.3.2) (2018.10.15)
+Processing ./.tox/.tmp/package/1/pdf2textbox-0.4.1.zip
+Requirement already satisfied: pdfminer2 in ./.tox/py36/lib/python3.6/site-packages (from pdf2textbox==0.4.1) (20151206)
+Requirement already satisfied: requests in ./.tox/py36/lib/python3.6/site-packages (from pdf2textbox==0.4.1) (2.21.0)
+Requirement already satisfied: six in ./.tox/py36/lib/python3.6/site-packages (from pdfminer2->pdf2textbox==0.4.1) (1.12.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.4.1) (2018.11.29)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.4.1) (3.0.4)
+Requirement already satisfied: urllib3<1.25,>=1.21.1 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.4.1) (1.24.1)
+Requirement already satisfied: idna<2.9,>=2.5 in ./.tox/py36/lib/python3.6/site-packages (from requests->pdf2textbox==0.4.1) (2.8)
 Building wheels for collected packages: pdf2textbox
-  Running setup.py bdist_wheel for pdf2textbox: started
-  Running setup.py bdist_wheel for pdf2textbox: finished with status 'done'
-  Stored in directory: /home/sam/.cache/pip/wheels/e1/c7/bf/a1c023a5b5b5ffea88c91cb9ae042f5cf94f41a2377215bf8d
+  Building wheel for pdf2textbox (setup.py): started
+  Building wheel for pdf2textbox (setup.py): finished with status 'done'
+  Stored in directory: /home/sam/.cache/pip/wheels/e0/d9/2e/f32e1e5f401eb5d11b70a74580386ba2be312789828fb79377
 Successfully built pdf2textbox
 Installing collected packages: pdf2textbox
-  Found existing installation: pdf2textbox 0.3.2
+  Found existing installation: pdf2textbox 0.4.1
     Not uninstalling pdf2textbox at /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox, outside environment /home/sam/projects/vEnvs/pdf2textbox/pdf2textbox/.tox/py36
     Can't uninstall 'pdf2textbox'. No files were found to uninstall.
-Successfully installed pdf2textbox-0.3.2
+Successfully installed pdf2textbox-0.4.1

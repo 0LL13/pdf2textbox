@@ -58,10 +58,10 @@ def pdf2textbox():
     if options.slice:
         page_from, page_to = _get_pages(pdf_loc, verbose)
         boxes = _pdf_to_text_slice(pdf, page_from, page_to, verbose)
-        _print_boxes_sliced(boxes, page_from, page_to, verbose)
+        #_print_boxes_sliced(boxes, page_from, page_to, verbose)
     else:
         boxes = _pdf_to_text_all(pdf, verbose)
-        _print_boxes_all(boxes, verbose)
+        #_print_boxes_all(boxes, verbose)
 
     pdf.close()
 
@@ -379,32 +379,30 @@ def _fill_boxes(LTPage, boxes, page_nr, verbose):
             text = None
         x0, x1, y0, y1 = _get_box_borders(LTLine)
 
-        # I change this as well ...
-        # box = namedtuple('box', ['x0', 'x1', 'y0', 'y1', 'text'])
         box = namedtuple('box', 'x0, x1, y0, y1, text')
         if verbose:
-            print('Deciding which part of the page: header or columns ...')
-            print('y0, Y_HEADER: ', y0, Y_HEADER)
+            print('** Deciding which part of the page: header or columns ...')
+            print(f'\theader if y0: {y0} >= Y_HEADER: {Y_HEADER}')
         if y0 >= Y_HEADER:
             boxes[page_nr]['header'].append(box(x0, x1, y0, y1, text))
             if verbose:
-                print('--> header')
+                print('\t--> header')
                 print(text)
         elif NR_OF_COLS == 1:
             boxes[page_nr]['column'].append(box(x0, x1, y0, y1, text))
         elif NR_OF_COLS == 2:
             if verbose:
-                print('x0, BOX_WIDTH_MAX: ', x0, BOX_WIDTH_MAX)
+                print(f'\tif x0: {x0} < {BOX_WIDTH_MAX}, x1: {x1}, y0: {y0}, y1: {y1}')
             if x0 < BOX_WIDTH_MAX:
-                if verbose:
-                    print('--> goes to left column')
-                    print(text)
                 boxes[page_nr]['left_column'].append(box(x0, x1, y0, y1, text))
-            else:
                 if verbose:
-                    print('--> goes to right column')
+                    print('\t--> goes to left column')
                     print(text)
+            else:
                 boxes[page_nr]['right_column'].append(box(x0, x1, y0, y1, text))
+                if verbose:
+                    print('\t--> goes to right column')
+                    print(text)
         elif NR_OF_COLS == 3:
             col = _choose_col(x0, x1, SIDE_PAGE_EDGE, BOX_WIDTH_MAX, verbose)
             boxes[page_nr][col].append(box(x0, x1, y0, y1, text))
@@ -418,13 +416,15 @@ def _get_page_parameters(LTPage, verbose):
     SIDE_PAGE_EDGE = round(LTPage.bbox[2])
     UPPER_PAGE_EDGE = round(LTPage.bbox[3])
     Y_HEADER = UPPER_PAGE_EDGE
-    # changing the list in namedtuple to string:
-    # box = namedtuple('box', ['x0', 'x1', 'y0', 'y1'])
-    params = namedtuple('params', 'x0, x1, y0, y1')
+    params = namedtuple('params', 'x0, x1, y0, y1, text')
     box_parameters = list()
     X0_MIN = X1_MAX = Y0_MIN = Y0_MAX = Y1_MAX = 0
 
     for LTLine in LTPage:
+        try:
+            text = LTLine.get_text()
+        except AttributeError:
+            text = None
         x0, x1, y0, y1 = _get_box_borders(LTLine)
         X0_MIN = _get_X0_MIN(x0, X0_MIN)
         X1_MAX = _get_X1_MAX(x1, X1_MAX)
@@ -432,7 +432,7 @@ def _get_page_parameters(LTPage, verbose):
         Y0_MAX = _get_Y0_MAX(y0, Y0_MAX)
         Y1_MAX = _get_Y1_MAX(y1, Y1_MAX)
 
-        box_parameters.append(params(x0, x1, y0, y1))
+        box_parameters.append(params(x0, x1, y0, y1, text))
 
     Y_HEADER = _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose)
     BOX_WIDTH_MAX = _get_box_width(box_parameters, Y_HEADER)
@@ -510,10 +510,13 @@ def _get_box_width(box_parameters, Y_HEADER):
 
 
 def _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose):
-    if verbose:
-        print('UPPER_PAGE_EDGE', UPPER_PAGE_EDGE)
-        print('Y1_MAX', Y1_MAX)
-
+    '''
+    Note: in PDF the upper border of a column can easily be higher than the
+    lower boarder of its header (anyway, I'm extrapolating these values).
+    --> header text will eventually be in a column, and column text will be found
+        inside the header's box ...
+    "PDF is evil." (Yusuke Shinyama)
+    '''
     headers = list()
     cols = list()
     for params in box_parameters:
@@ -537,14 +540,8 @@ def _get_y_header(UPPER_PAGE_EDGE, box_parameters, Y1_MAX, verbose):
                 y0 = params.y0
         else:
             y0 = upper_cols_border
-
     Y_HEADER = y0
 
-    if verbose:
-        print(box_parameters)
-        print('upper_cols_border:', upper_cols_border)
-        print('headers:', headers)
-        print('Y_HEADER:', Y_HEADER)
     return Y_HEADER
 
 
@@ -727,14 +724,13 @@ def _print_page_parameters(X0_MIN, X1_MAX, Y0_MIN, Y0_MAX, Y1_MAX,\
     print('Y0_MIN', Y0_MIN)
     print('Y0_MAX', Y0_MAX)
     print('Y1_MAX', Y1_MAX)
-    print(box_parameters)
+    #print(box_parameters)
     print('page edges', SIDE_PAGE_EDGE, UPPER_PAGE_EDGE)
     print('BOX_WIDTH_MAX', BOX_WIDTH_MAX)
     print('Y_HEADER', Y_HEADER)
     print('UPPER_PAGE_EDGE', UPPER_PAGE_EDGE)
     print('NR_OF_COLS', NR_OF_COLS)
-    print('Only one box per column?')
-    print('\t\t\t', _only_one_box(box_parameters, NR_OF_COLS))
+    print('*'*60)
     print()
 
 
