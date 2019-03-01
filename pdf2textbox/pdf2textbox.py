@@ -106,7 +106,11 @@ def _get_url(url=None):
     # will return empty lists for columns
     url10 = '{}Id=MMP14%2F56|6267|6269'.format(base)
 
-    url = url10
+    url11 = '{}Id=MMP14%2F120|13963|13967'.format(base)
+
+    url12 = '{}Id=MMP14%2F56|6272|6277'.format(base)
+
+    url = url12
     return url
 
 
@@ -267,25 +271,35 @@ def _pdf_to_text_slice(pdf, page_from, page_to, verbose):
         LTPage = device.get_result()
         try:
             if index >= 1:
-                index = index + 2       # why?
+                index += 2       # bc even indexes will point to class 'int' objects
             else:
-                index = 1               # shouldn't that be 3 ?
-            if int(page.doc.catalog['PageLabels']['Nums'][index]['St']) ==\
-                    int(page_from):
-                        token_start = True
-            elif int(page.doc.catalog['PageLabels']['Nums'][index]['St']) ==\
-                    int(page_to):
-                        token_end = True
+                index = 1
+            #print('index:', index)
+            #print('page_from:', page_from)
+            #print('page_to:', page_to)
+            #print('token_start', token_start)
+            try:
+                if int(page.doc.catalog['PageLabels']['Nums'][index]['St']) ==\
+                        int(page_from):
+                            token_start = True
+                elif int(page.doc.catalog['PageLabels']['Nums'][index]['St']) ==\
+                        int(page_to):
+                            token_end = True
+            except AttributeError:
+                pass
         except KeyError:
+            print('KeyError at index:', index)
             token_start, token_end = _find_start_and_end_page(LTPage, page_from,\
                     page_to, token_start, token_end)
 
         if token_start:
             boxes = _fill_boxes(LTPage, boxes, page_nr, verbose)
+
         if token_end:
             token_start = False
             token_end = False
 
+    _print_boxes_sliced(boxes, page_from, page_to, verbose=True)
     return boxes
 
 
@@ -328,11 +342,11 @@ def _pdf_to_text_all(pdf, verbose):
 
 
 def _print_boxes_sliced(boxes, page_from, page_to, verbose):
-    token = False
-    for key, value in boxes.items():
+    token = True
+    for page_nr, d in boxes.items():
         if verbose:
-            print(key)
-        for kk, vv in value.items():
+            print(page_nr)
+        for kk, vv in d.items():
             if verbose:
                 print(kk)
             for box in vv:
@@ -371,7 +385,9 @@ def _fill_boxes(LTPage, boxes, page_nr, verbose):
             _get_page_parameters(LTPage, verbose)
     boxes[page_nr] = dict()
     boxes = _init_boxes(Y_HEADER, UPPER_PAGE_EDGE, NR_OF_COLS, page_nr, boxes)
+    Box = namedtuple('Box', 'x0, x1, y0, y1, text')
 
+    #print('nr of columns:', NR_OF_COLS)
     for LTLine in LTPage:
         try:
             text = LTLine.get_text()
@@ -379,36 +395,40 @@ def _fill_boxes(LTPage, boxes, page_nr, verbose):
             text = None
         x0, x1, y0, y1 = _get_box_borders(LTLine)
 
-        box = namedtuple('box', 'x0, x1, y0, y1, text')
+        box = Box(x0, x1, y0, y1, text)
+        #print(box)
+
         if verbose:
             print('** Deciding which part of the page: header or columns ...')
             print(f'\theader if y0: {y0} >= Y_HEADER: {Y_HEADER}')
         if y0 >= Y_HEADER:
-            boxes[page_nr]['header'].append(box(x0, x1, y0, y1, text))
+            boxes[page_nr]['header'].append(box)
             if verbose:
                 print('\t--> header')
                 print(text)
         elif NR_OF_COLS == 1:
-            boxes[page_nr]['column'].append(box(x0, x1, y0, y1, text))
+            boxes[page_nr]['column'].append(box)
         elif NR_OF_COLS == 2:
             if verbose:
                 print(f'\tif x0: {x0} < {BOX_WIDTH_MAX}, x1: {x1}, y0: {y0}, y1: {y1}')
             if x0 < BOX_WIDTH_MAX:
-                boxes[page_nr]['left_column'].append(box(x0, x1, y0, y1, text))
+                boxes[page_nr]['left_column'].append(box)
                 if verbose:
                     print('\t--> goes to left column')
                     print(text)
             else:
-                boxes[page_nr]['right_column'].append(box(x0, x1, y0, y1, text))
+                boxes[page_nr]['right_column'].append(box)
                 if verbose:
                     print('\t--> goes to right column')
                     print(text)
         elif NR_OF_COLS == 3:
             col = _choose_col(x0, x1, SIDE_PAGE_EDGE, BOX_WIDTH_MAX, verbose)
-            boxes[page_nr][col].append(box(x0, x1, y0, y1, text))
+            boxes[page_nr][col].append(box)
         else:
             break
 
+    #for pagenr, d in boxes.items():
+    #    print(pagenr, d)
     return boxes
 
 
