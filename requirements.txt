@@ -7,7 +7,7 @@ Click==7.0
 detox==0.15
 dnspython==1.15.0
 docutils==0.14
-eventlet==0.24.1
+eventlet==0.31.0
 filelock==3.0.9
 greenlet==0.4.15
 idna==2.6
